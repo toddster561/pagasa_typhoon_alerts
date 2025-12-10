@@ -36,7 +36,7 @@ def send_alert(report):
         end_date = end_date.strftime("%B %d, %Y")
         message = (
         f"Likelihood: {report.likelihood} for the next two weeks"
-        f"Forecast Date: From {start_date} to {end_date}"
+        f"\nForecast Date: From {start_date} to {end_date}"
         ).strip()
 
     response = requests.post(
