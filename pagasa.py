@@ -2,8 +2,8 @@ import requests, sys, re, fitz, PIL.Image, os, json, time
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 from dataclasses import dataclass #new
-from pathlib import Path
-from io import BytesIO
+# from pathlib import Path
+# from io import BytesIO
 from notify_alerts import send_alert
 
 @dataclass
@@ -300,6 +300,7 @@ if bulletin_stat:
         num = 5 # Records signal number of contents
         loc_list, signal_dict = [], {}
 
+        place = "Consolacion"
         # Extracts the content in each tbody for the 5 signal numbers, then appends to the dict
         for tbody in tbodies:
             signal_dict[num]= None
@@ -326,7 +327,6 @@ if bulletin_stat:
             else: continue
 
         # If Consolacion not in list, then check Cebu and return highest signal number
-        place = "Consolacion"
         if not signal_no:
             print(f"{place} does not have a signal number.")
             place = "Cebu"
@@ -427,14 +427,14 @@ if not bulletin_stat and not advisory_stat:
     # cropped.save(track_image_path)
     #
     # print("URL: https://www.pagasa.dost.gov.ph/tropical-cyclone/tc-threat-potential-forecast")
-    #
-    # tp_report = Report(
-    #     report_type = "Threat Potential",
-    #     date = issue_datetime,
-    #     likelihood = likelihood,
-    #     track = str(track_image_path),
-    #     url = pagasa_TP
-    # )
+
+    tp_report = Report(
+        report_type = "Threat Potential",
+        date = issue_datetime,
+        likelihood = likelihood,
+        # track = str(track_image_path),
+        url = pagasa_TP
+    )
 
     # Compare already recorded data from json and incoming data from website
     recorded_date = report_data['Threat Potential']['date']
