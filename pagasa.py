@@ -11,8 +11,8 @@ class Report:
     report_type: str = "Unknown"
     report_no: int = 0
     date: datetime = None
-    track: str = "Unknown"
-    name: str = "Unknown"
+    # track: str = "Unknown"
+    name: str = ""
     wind_speed: str = "Unknown"
     intensity: str = "Unknown"
     url: str = "Unknown"
@@ -139,25 +139,26 @@ if advisory_stat:
         print("Error: No Date Found")
     start2 = time.time()
 
-    # Searches for track image of report
-    pdf = fitz.open(stream=response.content, filetype="pdf")
-    page = pdf[0]  # page 1
-
-    # Screenshots page then saves into RAM
-    pic = page.get_pixmap(dpi=300)
-    img_bytes = BytesIO(pic.tobytes("png"))
-    img = PIL.Image.open(img_bytes)
-
-    # Creates folder for cropped image
-    folder_path = Path("advisory")
-    folder_path.mkdir(parents=True, exist_ok=True)
-
-    # Crops the screenshot based on bounding box coords
-    x1, y1 = 1183, 790
-    x2, y2 = 2216, 1598
-    cropped = img.crop((x1, y1, x2, y2))
-    track_image_path = folder_path / "atrack_1.png"
-    cropped.save(track_image_path)
+    ## Temporarily disabled
+    # # Searches for track image of report
+    # pdf = fitz.open(stream=response.content, filetype="pdf")
+    # page = pdf[0]  # page 1
+    #
+    # # Screenshots page then saves into RAM
+    # pic = page.get_pixmap(dpi=300)
+    # img_bytes = BytesIO(pic.tobytes("png"))
+    # img = PIL.Image.open(img_bytes)
+    #
+    # # Creates folder for cropped image
+    # folder_path = Path("advisory")
+    # folder_path.mkdir(parents=True, exist_ok=True)
+    #
+    # # Crops the screenshot based on bounding box coords
+    # x1, y1 = 1183, 790
+    # x2, y2 = 2216, 1598
+    # cropped = img.crop((x1, y1, x2, y2))
+    # track_image_path = folder_path / "atrack_1.png"
+    # cropped.save(track_image_path)
 
     # Searches for cyclone name and intensity
     pattern = r"TROPICAL CYCLONE ADVISORY NR\.\s*\d+\s*\n([^\n]+)"
@@ -181,7 +182,7 @@ if advisory_stat:
         report_type = 'Advisory',
         report_no = report_no,
         date = date,
-        track = str(track_image_path),
+        # track = str(track_image_path),
         name = typhoon_name,
         intensity = typhoon_intensity,
         url = str(advisory_link)
@@ -257,19 +258,20 @@ if bulletin_stat:
         date_text = row.h5.text.strip().removeprefix("Issued at ")
         date = datetime.strptime(date_text, "%I:%M %p, %d %B %Y")
 
-        # Searches for track image
-        row = tab.find_all('div', class_='row')[2]
-        col = row.find_all('div', class_='col-md-6')[1]
-        image_link = col.img['src']
-
-        # Create folder then save into folder
-        folder_path = Path("bulletin")
-        folder_path.mkdir(parents=True, exist_ok=True)
-        track_image_path = f"{folder_path}/btrack_1.png"
-
-        response = requests.get(image_link)
-        with open(track_image_path, "wb") as f:
-            f.write(response.content)
+        ## Temporarily disabled
+        # # Searches for track image
+        # row = tab.find_all('div', class_='row')[2]
+        # col = row.find_all('div', class_='col-md-6')[1]
+        # image_link = col.img['src']
+        #
+        # # Create folder then save into folder
+        # folder_path = Path("bulletin")
+        # folder_path.mkdir(parents=True, exist_ok=True)
+        # track_image_path = f"{folder_path}/btrack_1.png"
+        #
+        # response = requests.get(image_link)
+        # with open(track_image_path, "wb") as f:
+        #     f.write(response.content)
 
         # Searches for wind speed
 
@@ -337,7 +339,7 @@ if bulletin_stat:
             report_type = 'Bulletin',
             report_no = report_no,
             date = date,
-            track = str(track_image_path),
+            # track = str(track_image_path),
             name = typhoon_name,
             intensity = typhoon_intensity,
             url = str(bulletin_link),
@@ -398,35 +400,36 @@ if not bulletin_stat and not advisory_stat:
     else:
         print("Error: No Likelihood Found")
 
-    # Screenshots the entire first page as png
-    pdf = fitz.open(stream=response.content, filetype="pdf")
-    page = pdf[0]  # page 1
-    pic = page.get_pixmap(dpi=300)
-
-    # Creates folder if needed
-    folder_path = Path("threat potential")
-    folder_path.mkdir(parents=True, exist_ok=True)
-
-    # Saves image in RAM
-    img_bytes = BytesIO(pic.tobytes("png"))
-    img = PIL.Image.open(img_bytes)
-
-    # Crops the screenshot based on bounding box coords
-    x1, y1 = 35, 58
-    x2, y2 = 1870, 2238
-    cropped = img.crop((x1, y1, x2, y2))
-    track_image_path = folder_path / "TPtrack_1.png"
-    cropped.save(track_image_path)
-
-    print("URL: https://www.pagasa.dost.gov.ph/tropical-cyclone/tc-threat-potential-forecast")
-
-    tp_report = Report(
-        report_type = "Threat Potential",
-        date = issue_datetime,
-        likelihood = likelihood,
-        track = str(track_image_path),
-        url = pagasa_TP
-    )
+    ## Temporarily disabled
+    # # Screenshots the entire first page as png
+    # pdf = fitz.open(stream=response.content, filetype="pdf")
+    # page = pdf[0]  # page 1
+    # pic = page.get_pixmap(dpi=300)
+    #
+    # # Creates folder if needed
+    # folder_path = Path("threat potential")
+    # folder_path.mkdir(parents=True, exist_ok=True)
+    #
+    # # Saves image in RAM
+    # img_bytes = BytesIO(pic.tobytes("png"))
+    # img = PIL.Image.open(img_bytes)
+    #
+    # # Crops the screenshot based on bounding box coords
+    # x1, y1 = 35, 58
+    # x2, y2 = 1870, 2238
+    # cropped = img.crop((x1, y1, x2, y2))
+    # track_image_path = folder_path / "TPtrack_1.png"
+    # cropped.save(track_image_path)
+    #
+    # print("URL: https://www.pagasa.dost.gov.ph/tropical-cyclone/tc-threat-potential-forecast")
+    #
+    # tp_report = Report(
+    #     report_type = "Threat Potential",
+    #     date = issue_datetime,
+    #     likelihood = likelihood,
+    #     track = str(track_image_path),
+    #     url = pagasa_TP
+    # )
 
     # Compare already recorded data from json and incoming data from website
     recorded_date = report_data['Threat Potential']['date']

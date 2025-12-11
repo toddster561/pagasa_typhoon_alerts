@@ -12,18 +12,18 @@ def send_alert(report):
     # Choose priority and change message based on threat level
     if "Bulletin" in report.report_type:
         tags = "cyclone"
-        title = f"{report.name} Bulletin {report.report_no}"
+        title = f"{report.intensity} {report.name}"
         message = (
-            f"Intensity: {report.intensity}"
+            "Location: Inside PAR"
             f"\nSignal Number {report.signal_no} in {report.place}"
             f"\nIssue Date: {report.date}"
             f"\nWind Speed: {report.wind_speed}"
         ).strip()
     elif "Advisory" in report.report_type:
         tags = "cloud_with_rain"
-        title = f"{report.name} Advisory {report.report_no}"
+        title = f"{report.intensity} {report.name}"
         message = (
-            f"Intensity: {report.intensity}"
+            "Location: Outside PAR"
             f"\nIssue Date: {report.date}"
             f"\nWind Speed: {report.wind_speed}"
         ).strip()
