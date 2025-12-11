@@ -29,7 +29,7 @@ def send_alert(report):
         ).strip()
     elif "Threat Potential" in report.report_type:
         tags = "red_circle"
-        title = "Threat Potential Update"
+        title = "Typhoon Potential Report"
         issue_date = report.date.date()
         end_date = issue_date + timedelta(days=13)
         start_date = issue_date.strftime("%B %d, %Y")
