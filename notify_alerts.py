@@ -35,8 +35,8 @@ def send_alert(report):
         start_date = issue_date.strftime("%B %d, %Y")
         end_date = end_date.strftime("%B %d, %Y")
         message = (
-        f"Likelihood: {report.likelihood} for the next two weeks"
-        f"\nForecast Date: From {start_date} to {end_date}"
+        f"Chance of typhoon is {report.likelihood}"
+        f"\nFrom {start_date} to {end_date}"
         ).strip()
 
     response = requests.post(
