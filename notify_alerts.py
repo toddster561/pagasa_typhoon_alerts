@@ -43,9 +43,9 @@ def send_alert(report):
         f"https://ntfy.sh/{NTFY_TOPIC}",
         data=message.encode('utf-8'),
         headers={
-            "Title": title,  # Remove emoji from title too
-            "Priority": "urgent",
-            "Tags": tags,  # Emojis work fine in tags!
+            "Title": title,
+            "Priority": "default",
+            "Tags": tags,
             "Actions": f"view, View Details, {report.url}"
         }
     )

@@ -391,7 +391,7 @@ if not bulletin_stat and not advisory_stat:
         print("Error: No Date Found")
 
     # Looks for Likelihood of Forecast
-    match = re.search(r"TC-THREAT POTENTIAL IS\s+((?:HIGHLY|VERY)\s+[A-Za-z]+|[A-Za-z]+)", text)
+    match = re.search(r"TC-THREAT POTENTIAL (?:is|IS)\s+((?:(?:VERY|HIGHLY)\s+)?[A-Z]+)", text)
     if match:
         likelihood = match.group(1)
         print(f"Likelihood: {likelihood} over the next two weeks")
