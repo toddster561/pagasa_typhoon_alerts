@@ -49,22 +49,26 @@ process = time.time()
 print("Checking Website Response")
 
 pagasa_adv = "https://www.pagasa.dost.gov.ph/tropical-cyclone-advisory-iframe"
-# pagasa_adv_present = "https://web.archive.org/web/20231114132459/https://www.pagasa.dost.gov.ph/tropical-cyclone-advisory-iframe"
 pagasa_bul = "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+pagasa_TP = "https://www.pagasa.dost.gov.ph/tropical-cyclone/tc-threat-potential-forecast"
+
+# For trouble shooting
+# pagasa_adv_present = "https://web.archive.org/web/20231114132459/https://www.pagasa.dost.gov.ph/tropical-cyclone-advisory-iframe"
 # pagasa_bul_present = "https://web.archive.org/web/20251002030048/https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
 # pagasa_bul_empty = "https://web.archive.org/web/20251201221931/https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
-pagasa_TP = "https://www.pagasa.dost.gov.ph/tropical-cyclone/tc-threat-potential-forecast"
 
 adv_report = bul_report = tp_report = None
 
 # Returns error if website is unresponsive
 try:
-    adv_html = requests.get(pagasa_adv, timeout=8).text #change this
-    # adv_present = requests.get(pagasa_adv_present, timeout=8).text
+    adv_html = requests.get(pagasa_adv, timeout=8).text
     bul_html = requests.get(pagasa_bul, timeout=8).text
-    # bul_present = requests.get(pagasa_bul_present, timeout=8).text
     tp_html = requests.get(pagasa_TP, timeout=8).text
+
+    # adv_present = requests.get(pagasa_adv_present, timeout=8).text
+    # bul_present = requests.get(pagasa_bul_present, timeout=8).text
     # bul_empty = requests.get(pagasa_bul_empty, timeout=8).text
+
 except Exception:
     print("Error: Site Unresponsive")
     sys.exit()
@@ -288,7 +292,7 @@ if bulletin_stat:
         ## Finds signal number of specified place
 
         signal_no = 0
-        place = "Ormoc"
+
         row = tab.find_all('div', class_='row')[4]
         table = row.find('table', class_='table text-center table-header')
         tbodies = table.find_all('tbody')
@@ -321,10 +325,11 @@ if bulletin_stat:
                     signal_no = key
             else: continue
 
-        # If Ormoc not in list, then check Leyte and return highest signal number
+        # If Consolacion not in list, then check Cebu and return highest signal number
+        place = "Consolacion"
         if not signal_no:
             print(f"{place} does not have a signal number.")
-            place = "Leyte"
+            place = "Cebu"
             for key, value in reverse_dict.items():
                 if value:
                     text = " ".join(value)
