@@ -466,16 +466,17 @@ if not bulletin_stat and not advisory_stat:
 # 6.If report number is different, then update report in json, then send update email/notification to me.
 # 7.Make new json file.
 
-else: ## Else, check bulletins and advisories
-    if advisory_stat and bulletin_stat:
-        print("Both are present!")
-        sys.exit()
+else: ## Else if either bulletins and advisors are present, check bulletins and advisories
+    ## Skip this for now, can add functionality later
+    # if advisory_stat and bulletin_stat:
+    #     print("Both are present!")
+    #     sys.exit()
 
-    elif bulletin_stat:
+    if bulletin_stat:
         incoming_bulletins = {}
         recorded_bulletins = report_data['Bulletin']
 
-        for bulletin in bulletin_list: # Iterates through all incoming bulletins
+        for bulletin in bulletin_list: # Makes a dict of all incoming bulletins and their labels
             incoming_bulletins[bulletin.name] = bulletin.label
         # Do the comparison if recorded bulletins exist, else add to the records
         if recorded_bulletins:
