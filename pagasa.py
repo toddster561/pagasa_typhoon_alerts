@@ -203,6 +203,8 @@ if advisory_stat:
 print("Checking Bulletin")
 ## Check if there is bulletin
 # FUTURE ME pls simplify this checking part by exploiting html patterns and not using strings
+# Suggestion is using the bulldozing method, downloading every single link and checking for patterns
+# Parse as pdf since html constantly changes
 bulletin_stat = True
 tab = row = typhoon_name = typhoon_intensity = None
 # Tries to find bulletin using article name and update
@@ -511,10 +513,11 @@ else: ## Else if either bulletins and advisors are present, check bulletins and 
     elif advisory_stat:
     # Since idk what format website follows for multiple advisories, assume only one advisory is recorded
     # FUTURE ME update this to include case of multiple advisories
+    # Suggestion is using the bulldozing method, downloading every single link and checking for patterns
         incoming_advisories = {}
         recorded_advisories = report_data['Advisory']
         incoming_advisories[adv_report.name] = adv_report.label
-        # Do the comparison if recorded advisories exist, else add to the records
+        # Do the comparison if recorded advisories exist
         if recorded_advisories:
             for name in list(recorded_advisories.keys()):
                 # if advisory name not incoming, then pagasa no longer recording it, thus delete from recorded advisories
@@ -534,7 +537,7 @@ else: ## Else if either bulletins and advisors are present, check bulletins and 
                         print("Sending data to user.")
                         send_stat = True
                         pass
-        else:
+        else: # else if no records, add incoming advisory to the record
             for name in list(incoming_advisories.keys()):
                 recorded_advisories[name] = incoming_advisories[name]
             send_stat = True

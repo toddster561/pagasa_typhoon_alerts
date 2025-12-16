@@ -19,6 +19,7 @@ def send_alert(report):
             f"\nIssue Date: {report.date}"
             f"\nWind Speed: {report.wind_speed}"
         ).strip()
+
     elif "Advisory" in report.report_type:
         tags = "cloud_with_rain"
         title = f"{report.intensity} {report.name}"
@@ -27,6 +28,7 @@ def send_alert(report):
             f"\nIssue Date: {report.date}"
             f"\nWind Speed: {report.wind_speed}"
         ).strip()
+
     elif "Threat Potential" in report.report_type:
         tags = "red_circle"
         title = "Typhoon Potential Report"
