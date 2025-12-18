@@ -6,7 +6,7 @@ from dataclasses import dataclass #new
 # from io import BytesIO
 from notify_alerts import send_alert
 
-@dataclass
+@dataclass # handles multiple instances of reports possible from pagasa
 class Report:
     report_type: str = "Unknown"
     report_no: int = 0
@@ -16,7 +16,7 @@ class Report:
     wind_speed: str = "Unknown"
     intensity: str = "Unknown"
     url: str = "Unknown"
-    place: str = "Ormoc" # Adjust based on liking
+    place: str = "Cebu" # Adjust based on liking
     signal_no: int = 0 # from bulletin only
     likelihood :str = "Unknown" # from threat potential only
 
@@ -80,7 +80,7 @@ print("~~~~~~~~~~~~~~~~~~")
 ## Opens json to be used to compare for new cyclones
 json_path = "monitored_cyclones.json"
 
-# Checks for json file, if no file makes blank dict
+# Checks for json file, if no file it relies on blank dict
 report_data = {'Bulletin': {},
                 'Advisory': {},
                 'Threat Potential': {
@@ -238,13 +238,14 @@ start = time.time()
 print("~~~~~~~~~~~~~~~~~~")
 
 ## Performs bulletin web parsing if there is one, then appends class data to list
-bulletin_list = []
+bulletin_list: list[Report] = []
 
 if bulletin_stat:
     print("Gathering Bulletin Data")
     col_offset = page.find('div', class_='col-md-12 col-lg-10 col-lg-offset-1') # ignores tabs from bulletin archive...at least it should
     tabs = col_offset.find_all('div', class_='tab-content')
 
+    # Iterates through all bulletin tabs
     for tab in tabs:
         row = tab.find('div', class_='row')
         typhoon = row.h3.text.split()
@@ -294,16 +295,15 @@ if bulletin_stat:
         ## Finds signal number of specified place
 
         signal_no = 0
-
         row = tab.find_all('div', class_='row')[4]
         table = row.find('table', class_='table text-center table-header')
         tbodies = table.find_all('tbody')
 
         num = 5 # Records signal number of contents
-        loc_list, signal_dict = [], {}
-
+        loc_list: list[str] = []
+        signal_dict: dict[int, list[str] | None] = {}
         place = "Consolacion"
-        # Extracts the content in each tbody for the 5 signal numbers, then appends to the dict
+        # Extracts the content in each tbody for the 5 signal numbers, then appends to the dict as values, with signal no as keys
         for tbody in tbodies:
             signal_dict[num]= None
             if tbody.ul:
@@ -468,7 +468,7 @@ if not bulletin_stat and not advisory_stat:
 # 6.If report number is different, then update report in json, then send update email/notification to me.
 # 7.Make new json file.
 
-else: ## Else if either bulletins and advisors are present, check bulletins and advisories
+else: ## Else if either bulletins and advisors are present, compare bulletins and advisories with recorded reports
     ## Skip this for now, can add functionality later
     # if advisory_stat and bulletin_stat:
     #     print("Both are present!")
@@ -497,23 +497,22 @@ else: ## Else if either bulletins and advisors are present, check bulletins and 
                     else:
                         print("Updating json.")
                         recorded_bulletins[name] = incoming_label
-                        print("Sending bulletin to email.")
                         send_stat = True
                         pass
         else:
             for name in list(incoming_bulletins.keys()):
                 recorded_bulletins[name] = incoming_bulletins[name]
-            print("Sending bulletin to email.")
             send_stat = True
         # Sends the notification
         if send_stat:
+            print("Sending notification to user.")
             for bulletin in bulletin_list:
                 send_alert(bulletin)
 
     elif advisory_stat:
     # Since idk what format website follows for multiple advisories, assume only one advisory is recorded
     # FUTURE ME update this to include case of multiple advisories
-    # Suggestion is using the bulldozing method, downloading every single link and checking for patterns
+    # Suggestion is using the bulldozing method, extracting every single link and checking for patterns
         incoming_advisories = {}
         recorded_advisories = report_data['Advisory']
         incoming_advisories[adv_report.name] = adv_report.label
@@ -534,14 +533,13 @@ else: ## Else if either bulletins and advisors are present, check bulletins and 
                     else:
                         print("Updating json.")
                         recorded_advisories[name] = incoming_label
-                        print("Sending data to user.")
                         send_stat = True
-                        pass
-        else: # else if no records, add incoming advisory to the record
+        else: # else if no records, add incoming advisory to the record, then notify user
             for name in list(incoming_advisories.keys()):
                 recorded_advisories[name] = incoming_advisories[name]
             send_stat = True
         if send_stat:
+            print("Sending notification to user.")
             send_alert(adv_report)
     print(report_data)
 
