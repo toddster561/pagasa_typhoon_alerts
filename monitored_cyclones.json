@@ -1,5 +1,7 @@
 {
-    "Bulletin": {},
+    "Bulletin": {
+        "Ada": "Bulletin 5"
+    },
     "Advisory": {},
     "Threat Potential": {
         "date": "2026-01-12 00:00:00",
