@@ -13,12 +13,20 @@ def send_alert(report):
     if "Bulletin" in report.report_type:
         tags = "cyclone"
         title = f"{report.intensity} {report.name}"
-        message = (
-            "Location: Inside PAR"
-            f"\nSignal Number {report.signal_no} in {report.place}"
-            f"\nIssue Date: {report.date}"
-            f"\nWind Speed: {report.wind_speed}"
-        ).strip()
+        if report.signal_no != 0:
+            message = (
+                "Location: Inside PAR"
+                f"\nSignal Number {report.signal_no} in {report.place}"
+                f"\nIssue Date: {report.date}"
+                f"\nWind Speed: {report.wind_speed}"
+            ).strip()
+        else:
+            message = (
+                "Location: Inside PAR"
+                f"\nNo signal number in {report.place}"
+                f"\nIssue Date: {report.date}"
+                f"\nWind Speed: {report.wind_speed}"
+            ).strip()
 
     elif "Advisory" in report.report_type:
         tags = "cloud_with_rain"
