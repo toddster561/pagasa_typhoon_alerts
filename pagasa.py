@@ -1,4 +1,4 @@
-import requests, sys, re, fitz, PIL.Image, os, json, time
+import requests, sys, re, fitz, os, json, time
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 from dataclasses import dataclass #new
@@ -294,52 +294,56 @@ if bulletin_stat:
         ## Finds signal number of specified place
 
         signal_no = 0
+        tbodies = None
 
         row = tab.find_all('div', class_='row')[4]
-        table = row.find('table', class_='table text-center table-header')
-        tbodies = table.find_all('tbody')
-
-        num = 5 # Records signal number of contents
-        loc_list, signal_dict = [], {}
+        try:
+            table = row.find('table', class_='table text-center table-header')
+            tbodies = table.find_all('tbody')
+        except AttributeError: pass
 
         place = "Consolacion"
-        # Extracts the content in each tbody for the 5 signal numbers, then appends to the dict
-        for tbody in tbodies:
-            signal_dict[num]= None
-            if tbody.ul:
-                ul = tbody.find('ul', style='text-align: left;')
-                li_ups = ul.find_all('li')
-                for li_up in li_ups:
-                    if li_up.ul:
-                        text = li_up.ul.li.text
-                        loc_list.append(text)
-                    else:continue
-                signal_dict[num] = loc_list.copy()
-                loc_list.clear()
-            else:
-                signal_dict[num] = loc_list
-            num -= 1
-        reverse_dict = dict(reversed(signal_dict.items()))
-        # Checks for the place in each entry and its signal number
-        for key, value in reverse_dict.items():
-            if value:
-                text = " ".join(value)
-                if place in text:
-                    signal_no = key
-            else: continue
+        if tbodies: # If there is record of signal number
+            num = 5 # Records signal number of contents
+            loc_list, signal_dict = [], {}
 
-        # If Consolacion not in list, then check Cebu and return highest signal number
-        if not signal_no:
-            print(f"{place} does not have a signal number.")
-            place = "Cebu"
+            # Extracts the content in each tbody for the 5 signal numbers, then appends to the dict
+            for tbody in tbodies:
+                signal_dict[num]= None
+                if tbody.ul:
+                    ul = tbody.find('ul', style='text-align: left;')
+                    li_ups = ul.find_all('li')
+                    for li_up in li_ups:
+                        if li_up.ul:
+                            text = li_up.ul.li.text
+                            loc_list.append(text)
+                        else:continue
+                    signal_dict[num] = loc_list.copy()
+                    loc_list.clear()
+                else:
+                    signal_dict[num] = loc_list
+                num -= 1
+            reverse_dict = dict(reversed(signal_dict.items()))
+            # Checks for the place in each entry and its signal number
             for key, value in reverse_dict.items():
                 if value:
                     text = " ".join(value)
                     if place in text:
                         signal_no = key
-                else:
-                    continue
-            print(f"{place} has signal number {signal_no}")
+                else: continue
+
+            # If Consolacion not in list, then check Cebu and return highest signal number
+            if not signal_no:
+                print(f"{place} does not have a signal number.")
+                place = "Cebu"
+                for key, value in reverse_dict.items():
+                    if value:
+                        text = " ".join(value)
+                        if place in text:
+                            signal_no = key
+                    else:
+                        continue
+                print(f"{place} has signal number {signal_no}")
 
         # Stores values into a cyclone object
         bul_report = Report(
