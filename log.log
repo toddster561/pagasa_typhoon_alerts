@@ -1,37 +1,39 @@
-2026-02-04 08:20:22,269 - DEBUG - Checking Website Response
-2026-02-04 08:20:22,270 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-02-04 08:20:24,426 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-02-04 08:20:24,781 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-02-04 08:20:25,806 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-02-04 08:20:26,167 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-02-04 08:20:27,168 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-02-04 08:20:27,517 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-02-04 08:20:27,518 - DEBUG - Checking Advisory
-2026-02-04 08:20:27,546 - INFO - No Advisory Found
-2026-02-04 08:20:27,546 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-02-04 08:20:27,546 - DEBUG - Checking Bulletin
-2026-02-04 08:20:27,578 - INFO - Bulletin found.
-2026-02-04 08:20:27,578 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-02-04 08:20:27,578 - DEBUG - Gathering Bulletin Data
-2026-02-04 08:20:27,579 - INFO - Bulletin Storm Name: Basyang
-2026-02-04 08:20:27,579 - INFO - Bulletin Storm Title: Tropical Depression
-2026-02-04 08:20:27,579 - INFO - Bulletin Status: True
-2026-02-04 08:20:27,614 - INFO - Consolacion does not have a signal number.
-2026-02-04 08:20:27,614 - INFO - Cebu has signal number 0
-2026-02-04 08:20:27,614 - INFO - Gathered Bulletin 3
-2026-02-04 08:20:27,615 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-02-04 08:20:27,615 - DEBUG - Checking bulletins/advisories for new updates.
-2026-02-04 08:20:27,615 - DEBUG - Checking bulletins...
-2026-02-04 08:20:27,615 - INFO - No update required for bulletin.
-2026-02-04 08:20:27,615 - INFO - {'Bulletin': {'Basyang': 'Bulletin 3'}, 'Advisory': {}, 'Threat Potential': {'date': '2026-02-02 00:00:00', 'likelihood': 'HIGHLY LIKELY'}}
-2026-02-04 08:20:27,615 - DEBUG - {
+2026-02-04 08:26:50,506 - DEBUG - Checking Website Response
+2026-02-04 08:26:50,507 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-02-04 08:26:52,601 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-02-04 08:26:53,016 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-02-04 08:26:54,186 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-02-04 08:26:54,607 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-02-04 08:26:55,796 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-02-04 08:26:56,214 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-02-04 08:26:56,214 - DEBUG - Checking Advisory
+2026-02-04 08:26:56,241 - INFO - No Advisory Found
+2026-02-04 08:26:56,241 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-02-04 08:26:56,241 - DEBUG - Checking Bulletin
+2026-02-04 08:26:56,274 - INFO - Bulletin found.
+2026-02-04 08:26:56,274 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-02-04 08:26:56,274 - DEBUG - Gathering Bulletin Data
+2026-02-04 08:26:56,274 - INFO - Bulletin Storm Name: Basyang
+2026-02-04 08:26:56,274 - INFO - Bulletin Storm Title: Tropical Depression
+2026-02-04 08:26:56,274 - INFO - Bulletin Status: True
+2026-02-04 08:26:56,285 - INFO - Consolacion does not have a signal number.
+2026-02-04 08:26:56,285 - INFO - Cebu has signal number 0
+2026-02-04 08:26:56,285 - INFO - Gathered Bulletin 3
+2026-02-04 08:26:56,285 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-02-04 08:26:56,285 - DEBUG - Checking bulletins/advisories for new updates.
+2026-02-04 08:26:56,285 - DEBUG - Checking bulletins...
+2026-02-04 08:26:56,285 - INFO - New update found. Sending bulletin as notification.
+2026-02-04 08:26:56,285 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-02-04 08:26:56,423 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 464
+2026-02-04 08:26:56,424 - INFO - {'Bulletin': {'Basyang': 'Bulletin 3'}, 'Advisory': {}, 'Threat Potential': {'date': '', 'likelihood': ''}}
+2026-02-04 08:26:56,425 - DEBUG - {
     "Bulletin": {
         "Basyang": "Bulletin 3"
     },
     "Advisory": {},
     "Threat Potential": {
-        "date": "2026-02-02 00:00:00",
-        "likelihood": "HIGHLY LIKELY"
+        "date": "",
+        "likelihood": ""
     }
 }
-2026-02-04 08:20:27,615 - DEBUG - Entire Process Executed
+2026-02-04 08:26:56,425 - DEBUG - Entire Process Executed
