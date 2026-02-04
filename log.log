@@ -1,34 +1,35 @@
-2026-02-04 08:26:50,506 - DEBUG - Checking Website Response
-2026-02-04 08:26:50,507 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-02-04 08:26:52,601 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-02-04 08:26:53,016 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-02-04 08:26:54,186 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-02-04 08:26:54,607 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-02-04 08:26:55,796 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-02-04 08:26:56,214 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-02-04 08:26:56,214 - DEBUG - Checking Advisory
-2026-02-04 08:26:56,241 - INFO - No Advisory Found
-2026-02-04 08:26:56,241 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-02-04 08:26:56,241 - DEBUG - Checking Bulletin
-2026-02-04 08:26:56,274 - INFO - Bulletin found.
-2026-02-04 08:26:56,274 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-02-04 08:26:56,274 - DEBUG - Gathering Bulletin Data
-2026-02-04 08:26:56,274 - INFO - Bulletin Storm Name: Basyang
-2026-02-04 08:26:56,274 - INFO - Bulletin Storm Title: Tropical Depression
-2026-02-04 08:26:56,274 - INFO - Bulletin Status: True
-2026-02-04 08:26:56,285 - INFO - Consolacion does not have a signal number.
-2026-02-04 08:26:56,285 - INFO - Cebu has signal number 0
-2026-02-04 08:26:56,285 - INFO - Gathered Bulletin 3
-2026-02-04 08:26:56,285 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-02-04 08:26:56,285 - DEBUG - Checking bulletins/advisories for new updates.
-2026-02-04 08:26:56,285 - DEBUG - Checking bulletins...
-2026-02-04 08:26:56,285 - INFO - New update found. Sending bulletin as notification.
-2026-02-04 08:26:56,285 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
-2026-02-04 08:26:56,423 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 464
-2026-02-04 08:26:56,424 - INFO - {'Bulletin': {'Basyang': 'Bulletin 3'}, 'Advisory': {}, 'Threat Potential': {'date': '', 'likelihood': ''}}
-2026-02-04 08:26:56,425 - DEBUG - {
+2026-02-04 23:20:52,729 - DEBUG - Checking Website Response
+2026-02-04 23:20:52,730 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-02-04 23:20:54,845 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-02-04 23:20:55,221 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-02-04 23:20:56,297 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-02-04 23:20:56,673 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-02-04 23:20:57,775 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-02-04 23:20:58,148 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-02-04 23:20:58,149 - DEBUG - Checking Advisory
+2026-02-04 23:20:58,176 - INFO - No Advisory Found
+2026-02-04 23:20:58,176 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-02-04 23:20:58,176 - DEBUG - Checking Bulletin
+2026-02-04 23:20:58,211 - INFO - Bulletin found.
+2026-02-04 23:20:58,211 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-02-04 23:20:58,211 - DEBUG - Gathering Bulletin Data
+2026-02-04 23:20:58,211 - INFO - Bulletin Storm Name: Basyang
+2026-02-04 23:20:58,212 - INFO - Bulletin Storm Title: Tropical Storm
+2026-02-04 23:20:58,212 - INFO - Bulletin Status: True
+2026-02-04 23:20:58,231 - INFO - Consolacion does not have a signal number.
+2026-02-04 23:20:58,231 - INFO - Cebu has signal number 1
+2026-02-04 23:20:58,231 - INFO - Gathered Bulletin 7
+2026-02-04 23:20:58,231 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-02-04 23:20:58,231 - DEBUG - Checking bulletins/advisories for new updates.
+2026-02-04 23:20:58,231 - DEBUG - Checking bulletins...
+2026-02-04 23:20:58,231 - INFO - Updating json.
+2026-02-04 23:20:58,231 - INFO - Sending bulletin to email.
+2026-02-04 23:20:58,232 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-02-04 23:20:58,439 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 458
+2026-02-04 23:20:58,440 - INFO - {'Bulletin': {'Basyang': 'Bulletin 7'}, 'Advisory': {}, 'Threat Potential': {'date': '', 'likelihood': ''}}
+2026-02-04 23:20:58,441 - DEBUG - {
     "Bulletin": {
-        "Basyang": "Bulletin 3"
+        "Basyang": "Bulletin 7"
     },
     "Advisory": {},
     "Threat Potential": {
@@ -36,4 +37,4 @@
         "likelihood": ""
     }
 }
-2026-02-04 08:26:56,425 - DEBUG - Entire Process Executed
+2026-02-04 23:20:58,441 - DEBUG - Entire Process Executed
