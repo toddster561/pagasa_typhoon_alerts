@@ -5,6 +5,8 @@ from dataclasses import dataclass #new
 # from pathlib import Path
 # from io import BytesIO
 from notify_alerts import send_alert
+import logging
+from logging import basicConfig, info, error, debug
 
 @dataclass
 class Report:
@@ -44,9 +46,15 @@ class Report:
         if self.report_type == "Bulletin" and self.likelihood != "Unknown":
             raise ValueError("Bulletins do not have likelihoods.")
 
+# For logging purposes
+log_file = "log.log"
+basicConfig(level=logging.DEBUG, filename=log_file, filemode="w",
+            format="%(asctime)s - %(levelname)s - %(message)s")
+###
+
 start = time.time()
 process = time.time()
-print("Checking Website Response")
+debug("Checking Website Response")
 
 pagasa_adv = "https://www.pagasa.dost.gov.ph/tropical-cyclone-advisory-iframe"
 pagasa_bul = "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
@@ -70,12 +78,11 @@ try:
     # bul_empty = requests.get(pagasa_bul_empty, timeout=8).text
 
 except Exception:
-    print("Error: Site Unresponsive")
+    error("Error: Site Unresponsive")
     sys.exit()
-print("Done")
 print("Elapsed:", time.time() - start, "seconds")
 start = time.time()
-print("~~~~~~~~~~~~~~~~~~")
+debug("~~~~~~~~~~~~~~~~~~")
 #####################################################################################################
 ## Opens json to be used to compare for new cyclones
 json_path = "monitored_cyclones.json"
@@ -94,7 +101,7 @@ if os.path.exists(json_path):
 
 #####################################################################################################
 
-print("Checking Advisory")
+debug("Checking Advisory")
 ## Check if there is advisory
 advisory_stat = True
 advisory_link = None
@@ -104,23 +111,24 @@ try:
     panel = soup.find('div', class_='panel-body text-center')
     iframe = panel.find_all('iframe')[0]
     advisory_link = iframe["src"]
-    print(f"Advisory Link: {advisory_link}")
-    print(f"Advisory Status: {advisory_stat}")
+    info("Advisory found.")
+    info(f"Advisory Link: {advisory_link}")
+    info(f"Advisory Status: {advisory_stat}")
     print("Elapsed:", time.time() - start, "seconds")
-    print("~~~~~~~~~~~~~~~~~~")
+    debug("~~~~~~~~~~~~~~~~~~")
 
 except IndexError:
-    print("No Advisory Found")
-    print("~~~~~~~~~~~~~~~~~~")
+    info("No Advisory Found")
+    debug("~~~~~~~~~~~~~~~~~~")
     advisory_stat = False
 except Exception:
-    print("Error: Unknown Error in Parsing Advisory")
+    error("Unknown Error in Parsing Advisory")
     advisory_stat = False
 
 ## Performs PDF parsing of Advisory if there is one
 
 if advisory_stat:
-    print("Gathering Advisory Data")
+    debug("Gathering Advisory Data")
     report_no = date = None
     # Converts pdf into text
     response = requests.get(advisory_link)
@@ -132,7 +140,7 @@ if advisory_stat:
     if match:
         report_no = int(match.group(1))
     else:
-        print("Error: No Report Number")
+        error("No Report Number")
 
     # Searches for date-time of report
     match = re.search(r"Issued at\s*(.+)", text)
@@ -140,7 +148,7 @@ if advisory_stat:
         date_text = match.group(1)
         date = datetime.strptime(date_text, "%I:%M %p, %d %B %Y ")
     else:
-        print("Error: No Date Found")
+        error("No Date Found")
     start2 = time.time()
 
     ## Temporarily disabled
@@ -173,7 +181,7 @@ if advisory_stat:
         typhoon_name = typhoon.pop().replace('"', '').capitalize()
         typhoon_intensity = " ".join(typhoon).title()
     else:
-        print("Error: No Cyclone Name and Intensity Found")
+        error("No Cyclone Name and Intensity Found")
 
     # Searches for cyclone wind speed
     pattern = r"Maximum\s+sustained\s+winds\s+of\s+(\d+)\s*km/hr?"
@@ -191,16 +199,14 @@ if advisory_stat:
         intensity = typhoon_intensity,
         url = str(advisory_link)
     )
-    print(adv_report.label)
-
-    print("Done")
+    info(f"Report Gathered: {adv_report.label}")
     print("Elapsed:", time.time() - start, "seconds")
     start = time.time()
-    print("~~~~~~~~~~~~~~~~~~")
+    debug("~~~~~~~~~~~~~~~~~~")
 
 #####################################################################################################
 
-print("Checking Bulletin")
+debug("Checking Bulletin")
 ## Check if there is bulletin
 # FUTURE ME pls simplify this checking part by exploiting html patterns and not using strings
 # Suggestion is using the bulldozing method, downloading every single link and checking for patterns
@@ -228,20 +234,20 @@ update = panel.h3.text if panel else ""
 # Checks box for bulletins
 if article_title in title and article_update not in update:
     bulletin_stat = True
+    info("Bulletin found.")
 else:
-    print("No Bulletin Found")
+    info("No Bulletin Found")
     bulletin_stat = False
 
-print("Done")
 print("Elapsed:", time.time() - start, "seconds")
 start = time.time()
-print("~~~~~~~~~~~~~~~~~~")
+debug("~~~~~~~~~~~~~~~~~~")
 
 ## Performs bulletin web parsing if there is one, then appends class data to list
 bulletin_list = []
 
 if bulletin_stat:
-    print("Gathering Bulletin Data")
+    debug("Gathering Bulletin Data")
     col_offset = page.find('div', class_='col-md-12 col-lg-10 col-lg-offset-1') # ignores tabs from bulletin archive...at least it should
     tabs = col_offset.find_all('div', class_='tab-content')
 
@@ -251,9 +257,9 @@ if bulletin_stat:
         typhoon_name = typhoon.pop().replace('"', '').capitalize()
         typhoon_intensity = " ".join(typhoon).title()
 
-        print(f"Bulletin Storm Name: {typhoon_name}")
-        print(f"Bulletin Storm Title: {typhoon_intensity}")
-        print(f"Bulletin Status: {bulletin_stat}")
+        info(f"Bulletin Storm Name: {typhoon_name}")
+        info(f"Bulletin Storm Title: {typhoon_intensity}")
+        info(f"Bulletin Status: {bulletin_stat}")
 
         # Searches for report number
         header = soup.find('div', class_='col-md-12 article-header')
@@ -334,7 +340,7 @@ if bulletin_stat:
 
             # If Consolacion not in list, then check Cebu and return highest signal number
             if not signal_no:
-                print(f"{place} does not have a signal number.")
+                info(f"{place} does not have a signal number.")
                 place = "Cebu"
                 for key, value in reverse_dict.items():
                     if value:
@@ -343,7 +349,7 @@ if bulletin_stat:
                             signal_no = key
                     else:
                         continue
-                print(f"{place} has signal number {signal_no}")
+                info(f"{place} has signal number {signal_no}")
 
         # Stores values into a cyclone object
         bul_report = Report(
@@ -359,11 +365,10 @@ if bulletin_stat:
             wind_speed = wind_speed
         )
         bulletin_list.append(bul_report)
-        print(f"Gathered {bul_report.label}")
-    print("Done")
+        info(f"Gathered {bul_report.label}")
     print("Elapsed:", time.time() - start, "seconds")
     start = time.time()
-    print("~~~~~~~~~~~~~~~~~~")
+    debug("~~~~~~~~~~~~~~~~~~")
 
 #############################################################################################
 # Sets not sending email/notif as default
@@ -373,7 +378,7 @@ send_stat = False
 if not bulletin_stat and not advisory_stat:
     tp_stat = True
     issue_datetime = likelihood = TCThreat_PDF_link = None
-    print("Checking Threat Potential")
+    debug("Checking Threat Potential")
 
     # Extracts PDF link of Typhoon Threat
     try:
@@ -382,7 +387,7 @@ if not bulletin_stat and not advisory_stat:
         col = row.find_all('div', class_='col-md-12')[2]
         TCThreat_PDF_link = col.a['href']
     except Exception:
-        print("No TP Report Found")
+        info("No TP Report Found")
         tp_stat = False
 
     # Extracts pdf text
@@ -399,17 +404,17 @@ if not bulletin_stat and not advisory_stat:
         end_date = issue_date + timedelta(days=13)
         start_date = issue_date.strftime("%B %d, %Y")
         end_date = end_date.strftime("%B %d, %Y")
-        print(f"Forecast Date: From {start_date} to {end_date}")
+        info(f"Forecast Date: From {start_date} to {end_date}")
     else:
-        print("Error: No Date Found")
+        error("No Date Found")
 
     # Looks for Likelihood of Forecast
     match = re.search(r"TC-THREAT POTENTIAL (?:is|IS)\s+((?:(?:VERY|HIGHLY)\s+)?[A-Z]+)", text)
     if match:
         likelihood = match.group(1)
-        print(f"Likelihood: {likelihood} over the next two weeks")
+        info(f"Likelihood: {likelihood} over the next two weeks")
     else:
-        print("Error: No Likelihood Found")
+        error("No Likelihood Found")
 
     ## Temporarily disabled
     # # Screenshots the entire first page as png
@@ -454,14 +459,13 @@ if not bulletin_stat and not advisory_stat:
             recorded_likelihood == incoming_likelihood):
         report_data['Threat Potential']['date'] = incoming_date
         report_data['Threat Potential']['likelihood'] = incoming_likelihood
-        print("Sending Threat Potential Report to email")
+        info("Sending Threat Potential Report to email")
         send_stat = True
     if send_stat:
         send_alert(tp_report)
-    print("Done")
     print("Elapsed:", time.time() - start, "seconds")
     start = time.time()
-    print("~~~~~~~~~~~~~~~~~~")
+    debug("~~~~~~~~~~~~~~~~~~")
 ##############################################################################################
 
 # 1.Extract data from json
@@ -473,12 +477,14 @@ if not bulletin_stat and not advisory_stat:
 # 7.Make new json file.
 
 else: ## Else if either bulletins and advisors are present, check bulletins and advisories
+    debug("Checking bulletins/advisories for new updates.")
     ## Skip this for now, can add functionality later
     # if advisory_stat and bulletin_stat:
     #     print("Both are present!")
     #     sys.exit()
 
     if bulletin_stat:
+        debug("Checking bulletins...")
         incoming_bulletins = {}
         recorded_bulletins = report_data['Bulletin']
 
@@ -489,25 +495,25 @@ else: ## Else if either bulletins and advisors are present, check bulletins and 
             for name in list(recorded_bulletins.keys()):
                 # if bulletin name not incoming, then pagasa no longer recording it, thus delete from recorded bulletins
                 if name not in incoming_bulletins.keys():
-                    print("Deleting key.")
+                    info(f"Deleting key for {name} because it is no longer in incoming bulletins")
                     del recorded_bulletins[name]
                 else:
                     # If same report number, ignore. If different, then update json and notify user.
                     incoming_label = incoming_bulletins[name]
                     recorded_label = recorded_bulletins[name]
                     if incoming_label == recorded_label:
-                        print("No update required.")
+                        info("No update required for bulletin.")
                         continue
                     else:
-                        print("Updating json.")
+                        info("Updating json.")
                         recorded_bulletins[name] = incoming_label
-                        print("Sending bulletin to email.")
+                        info("Sending bulletin to email.")
                         send_stat = True
                         pass
         else:
             for name in list(incoming_bulletins.keys()):
                 recorded_bulletins[name] = incoming_bulletins[name]
-            print("Sending bulletin to email.")
+            info("New update found. Sending bulletin as notification.")
             send_stat = True
         # Sends the notification
         if send_stat:
@@ -515,6 +521,7 @@ else: ## Else if either bulletins and advisors are present, check bulletins and 
                 send_alert(bulletin)
 
     elif advisory_stat:
+        debug("Checking advisories...")
     # Since idk what format website follows for multiple advisories, assume only one advisory is recorded
     # FUTURE ME update this to include case of multiple advisories
     # Suggestion is using the bulldozing method, downloading every single link and checking for patterns
@@ -526,19 +533,19 @@ else: ## Else if either bulletins and advisors are present, check bulletins and 
             for name in list(recorded_advisories.keys()):
                 # if advisory name not incoming, then pagasa no longer recording it, thus delete from recorded advisories
                 if name not in incoming_advisories.keys():
-                    print("Deleting key.")
+                    info(f"Deleting key for {name} since it is no longer in incoming advisories")
                     del recorded_advisories[name]
                 else:
                     # If same report number, ignore. If different, then update json and notify user.
                     incoming_label = incoming_advisories[name]
                     recorded_label = recorded_advisories[name]
                     if incoming_label == recorded_label:
-                        print("No update required.")
+                        info("No update required for advisory.")
                         continue
                     else:
-                        print("Updating json.")
+                        info("Updating json.")
                         recorded_advisories[name] = incoming_label
-                        print("Sending data to user.")
+                        info("New update found. Sending advisory as notification.")
                         send_stat = True
                         pass
         else: # else if no records, add incoming advisory to the record
@@ -547,12 +554,12 @@ else: ## Else if either bulletins and advisors are present, check bulletins and 
             send_stat = True
         if send_stat:
             send_alert(adv_report)
-    print(report_data)
+    info(report_data)
 
 json_string = json.dumps(report_data, indent=4)
-print(json_string)
+debug(json_string)
 with open(json_path, 'w') as f:
     json.dump(report_data, f, indent=4)
 
-print("Entire Process Executed")
+debug("Entire Process Executed")
 print("Elapsed:", time.time() - process, "seconds")

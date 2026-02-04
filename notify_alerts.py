@@ -1,7 +1,8 @@
 import requests
 from datetime import timedelta
 
-NTFY_TOPIC = "pagasa-cyclone-alerts-561"
+# NTFY_TOPIC = "pagasa-cyclone-alerts-561"
+NTFY_TOPIC = "pagasa-cyclone-alerts-test"
 
 def send_alert(report):
     title = "Report"
