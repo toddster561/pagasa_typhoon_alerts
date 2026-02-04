@@ -1,5 +1,7 @@
 {
-    "Bulletin": {},
+    "Bulletin": {
+        "Basyang": "Bulletin 3"
+    },
     "Advisory": {},
     "Threat Potential": {
         "date": "2026-02-02 00:00:00",
