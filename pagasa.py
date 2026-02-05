@@ -462,7 +462,10 @@ if not bulletin_stat and not advisory_stat:
         info("Sending Threat Potential Report to email")
         send_stat = True
     if send_stat:
-        send_alert(tp_report)
+        try:
+            send_alert(tp_report)
+        except Exception:
+            error("Unable to connect to Ntfy.")
     print("Elapsed:", time.time() - start, "seconds")
     start = time.time()
     debug("~~~~~~~~~~~~~~~~~~")
@@ -518,7 +521,10 @@ else: ## Else if either bulletins and advisors are present, check bulletins and 
         # Sends the notification
         if send_stat:
             for bulletin in bulletin_list:
-                send_alert(bulletin)
+                try:
+                    send_alert(bulletin)
+                except Exception:
+                    error("Unable to connect to Ntfy.")
 
     elif advisory_stat:
         debug("Checking advisories...")
@@ -553,7 +559,10 @@ else: ## Else if either bulletins and advisors are present, check bulletins and 
                 recorded_advisories[name] = incoming_advisories[name]
             send_stat = True
         if send_stat:
-            send_alert(adv_report)
+            try:
+                send_alert(adv_report)
+            except Exception:
+                error("Unable to connect to Ntfy.")
     info(report_data)
 
 json_string = json.dumps(report_data, indent=4)
