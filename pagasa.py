@@ -8,6 +8,12 @@ from notify_alerts import send_alert
 import logging
 from logging import basicConfig, info, error, debug
 
+# For logging purposes
+log_file = "log.log"
+basicConfig(level=logging.DEBUG, filename=log_file, filemode="w",
+            format="%(asctime)s - %(levelname)s - %(message)s")
+###
+
 @dataclass
 class Report:
     report_type: str = "Unknown"
@@ -32,25 +38,24 @@ class Report:
         self.report_type = self.report_type.title()
         # Restricts report type and intensity
         allowed_report_types = ["Advisory", "Bulletin", "Threat Potential"]
-        allowed_intensity = ["Low Pressure Area","Tropical Depression", "Tropical Storm", "Severe Tropical Storm", "Typhoon", "Super Typhoon"]
+        allowed_intensity = ["LPA","Tropical Depression", "Tropical Storm", "Severe Tropical Storm", "Typhoon", "Super Typhoon"]
         if self.report_type not in allowed_report_types:
+            error(f"Invalid Report Type:{self.report_type}.")
             raise ValueError(f"Invalid Report Type:{self.report_type}.")
         if self.intensity not in allowed_intensity and self.report_type != "Threat Potential":
+            error(f"Invalid Intensity:{self.intensity}.")
             raise ValueError(f"Invalid Intensity:{self.intensity}.")
         # Restricts rule that advisories cannot have signal numbers or likelihoods
         if self.report_type == "Advisory" and (self.signal_no != 0 or self.likelihood != "Unknown"):
+            error("Advisories do not have signal numbers or likelihoods.")
             raise ValueError("Advisories do not have signal numbers or likelihoods.")
         # Restricts rule that threat potentials cannot have signal numbers
         if self.report_type == "Threat Potential" and self.signal_no != 0:
+            error("Threat Potentials do not have signal numbers.")
             raise ValueError("Threat Potentials do not have signal numbers.")
         if self.report_type == "Bulletin" and self.likelihood != "Unknown":
+            error("Bulletins do not have likelihoods.")
             raise ValueError("Bulletins do not have likelihoods.")
-
-# For logging purposes
-log_file = "log.log"
-basicConfig(level=logging.DEBUG, filename=log_file, filemode="w",
-            format="%(asctime)s - %(levelname)s - %(message)s")
-###
 
 start = time.time()
 process = time.time()
@@ -256,9 +261,10 @@ if bulletin_stat:
         typhoon = row.h3.text.split()
         typhoon_name = typhoon.pop().replace('"', '').capitalize()
         typhoon_intensity = " ".join(typhoon).title()
+        if typhoon_intensity == "Lpa": typhoon_intensity = "LPA"
 
         info(f"Bulletin Storm Name: {typhoon_name}")
-        info(f"Bulletin Storm Title: {typhoon_intensity}")
+        info(f"Bulletin Storm Intensity: {typhoon_intensity}")
         info(f"Bulletin Status: {bulletin_stat}")
 
         # Searches for report number
@@ -292,8 +298,18 @@ if bulletin_stat:
         panel = col.find_all('div', class_='panel')[2]
         body = panel.find('div', class_='panel-body')
         text = body.p.text.strip().removeprefix("Maximum sustained winds of ")
-        text = re.sub(r"(\b\d{1,3})\D.*$", r"\1", text)
-        wind_speed = text + " km/hr"
+
+        # Old code, completely forgot why I designed it this way
+        # text = re.sub(r"(\b\d{1,3})\D.*$", r"\1", text)
+        # wind_speed = text + " km/hr"
+
+        # Extract just the number if it exists
+        match = re.search(r"\b(\d{1,3})\b", text)
+        if match:
+            wind_speed = match.group(1) + " km/hr"
+        else:
+            wind_speed = "No wind speed found."
+
         # Sets url
         bulletin_link = pagasa_bul
 
@@ -365,10 +381,14 @@ if bulletin_stat:
             wind_speed = wind_speed
         )
         bulletin_list.append(bul_report)
+        info(f"Bulletin Signal Number: {bul_report.signal_no}")
+        info(f"Bulletin Report Place: {bul_report.place}")
+        info(f"Bulletin Wind Speed: {bul_report.wind_speed}")
         info(f"Gathered {bul_report.label}")
+        debug("~~~~~~~~~~~~~~~~~~")
     print("Elapsed:", time.time() - start, "seconds")
     start = time.time()
-    debug("~~~~~~~~~~~~~~~~~~")
+
 
 #############################################################################################
 # Sets not sending email/notif as default
