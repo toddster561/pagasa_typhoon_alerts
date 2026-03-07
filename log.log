@@ -1,27 +1,27 @@
-2026-03-06 23:21:43,495 - DEBUG - Checking Website Response
-2026-03-06 23:21:43,496 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-03-06 23:21:45,295 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-03-06 23:21:45,654 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-03-06 23:21:46,658 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-03-06 23:21:47,010 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-03-06 23:21:47,983 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-03-06 23:21:48,333 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-03-06 23:21:48,334 - DEBUG - Checking Advisory
-2026-03-06 23:21:48,361 - INFO - No Advisory Found
-2026-03-06 23:21:48,361 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-03-06 23:21:48,361 - DEBUG - Checking Bulletin
-2026-03-06 23:21:48,388 - INFO - No Bulletin Found
-2026-03-06 23:21:48,388 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-03-06 23:21:48,388 - DEBUG - Checking Threat Potential
-2026-03-06 23:21:48,416 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
-2026-03-06 23:21:50,041 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 988370
-2026-03-06 23:21:52,165 - INFO - Forecast Date: From March 06, 2026 to March 19, 2026
-2026-03-06 23:21:52,165 - ERROR - No Likelihood Found
-2026-03-06 23:21:52,165 - INFO - Sending Threat Potential Report to email
-2026-03-06 23:21:52,166 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
-2026-03-06 23:21:52,407 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 432
-2026-03-06 23:21:52,408 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-03-06 23:21:52,408 - DEBUG - {
+2026-03-07 23:16:17,102 - DEBUG - Checking Website Response
+2026-03-07 23:16:17,103 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-03-07 23:16:19,630 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-03-07 23:16:20,039 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-03-07 23:16:21,217 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-03-07 23:16:21,628 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-03-07 23:16:22,768 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-03-07 23:16:23,176 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-03-07 23:16:23,177 - DEBUG - Checking Advisory
+2026-03-07 23:16:23,204 - INFO - No Advisory Found
+2026-03-07 23:16:23,204 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-03-07 23:16:23,204 - DEBUG - Checking Bulletin
+2026-03-07 23:16:23,230 - INFO - No Bulletin Found
+2026-03-07 23:16:23,231 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-03-07 23:16:23,231 - DEBUG - Checking Threat Potential
+2026-03-07 23:16:23,258 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-03-07 23:16:25,341 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 988370
+2026-03-07 23:16:30,984 - INFO - Forecast Date: From March 06, 2026 to March 19, 2026
+2026-03-07 23:16:30,984 - ERROR - No Likelihood Found
+2026-03-07 23:16:30,985 - INFO - Sending Threat Potential Report to email
+2026-03-07 23:16:30,985 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-03-07 23:16:31,100 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 432
+2026-03-07 23:16:31,101 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-03-07 23:16:31,102 - DEBUG - {
     "Bulletin": {
         "Basyang": "Bulletin 23"
     },
@@ -31,4 +31,4 @@
         "likelihood": null
     }
 }
-2026-03-06 23:21:52,408 - DEBUG - Entire Process Executed
+2026-03-07 23:16:31,102 - DEBUG - Entire Process Executed
