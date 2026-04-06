@@ -1,3 +1,34 @@
-2026-04-05 23:27:06,587 - DEBUG - Checking Website Response
-2026-04-05 23:27:06,588 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-04-05 23:27:11,437 - ERROR - Error: Site Unresponsive
+2026-04-06 23:29:02,217 - DEBUG - Checking Website Response
+2026-04-06 23:29:02,218 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-04-06 23:29:04,286 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-04-06 23:29:04,737 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-04-06 23:29:04,801 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-04-06 23:29:04,826 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-04-06 23:29:05,798 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-04-06 23:29:06,247 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-04-06 23:29:06,248 - DEBUG - Checking Advisory
+2026-04-06 23:29:06,272 - INFO - No Advisory Found
+2026-04-06 23:29:06,272 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-04-06 23:29:06,272 - DEBUG - Checking Bulletin
+2026-04-06 23:29:06,295 - INFO - No Bulletin Found
+2026-04-06 23:29:06,295 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-04-06 23:29:06,295 - DEBUG - Checking Threat Potential
+2026-04-06 23:29:06,320 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-04-06 23:29:12,012 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 1037458
+2026-04-06 23:29:17,030 - INFO - Forecast Date: From April 06, 2026 to April 19, 2026
+2026-04-06 23:29:17,030 - INFO - Likelihood: LIKELY over the next two weeks
+2026-04-06 23:29:17,030 - INFO - Sending Threat Potential Report to email
+2026-04-06 23:29:17,031 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-04-06 23:29:17,210 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 434
+2026-04-06 23:29:17,210 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-04-06 23:29:17,211 - DEBUG - {
+    "Bulletin": {
+        "Basyang": "Bulletin 23"
+    },
+    "Advisory": {},
+    "Threat Potential": {
+        "date": "2026-04-06 00:00:00",
+        "likelihood": "LIKELY"
+    }
+}
+2026-04-06 23:29:17,211 - DEBUG - Entire Process Executed
