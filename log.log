@@ -1,39 +1,41 @@
-2026-05-06 23:42:37,784 - DEBUG - Checking Website Response
-2026-05-06 23:42:37,785 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-05-06 23:42:43,189 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-05-06 23:42:43,590 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-05-06 23:42:44,368 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-05-06 23:42:44,780 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-05-06 23:42:49,362 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-05-06 23:42:49,788 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-06 23:42:49,788 - DEBUG - Checking Advisory
-2026-05-06 23:42:49,815 - INFO - Advisory found.
-2026-05-06 23:42:49,816 - INFO - Advisory Link: https://pubfiles.pagasa.dost.gov.ph/tamss/weather/tcadvisory.pdf#toolbar=0&navpanes=0&scrollbar=0
-2026-05-06 23:42:49,816 - INFO - Advisory Status: True
-2026-05-06 23:42:49,816 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-06 23:42:49,816 - DEBUG - Gathering Advisory Data
-2026-05-06 23:42:49,816 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
-2026-05-06 23:42:51,505 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /tamss/weather/tcadvisory.pdf HTTP/1.1" 200 725249
-2026-05-06 23:42:56,438 - INFO - Report Gathered: Advisory 1
-2026-05-06 23:42:56,438 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-06 23:42:56,438 - DEBUG - Checking Bulletin
-2026-05-06 23:42:56,465 - INFO - No Bulletin Found
-2026-05-06 23:42:56,465 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-06 23:42:56,465 - DEBUG - Checking bulletins/advisories for new updates.
-2026-05-06 23:42:56,465 - DEBUG - Checking advisories...
-2026-05-06 23:42:56,466 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
-2026-05-06 23:42:56,698 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 477
-2026-05-06 23:42:56,699 - INFO - {'Bulletin': {'Basyang': 'Bulletin 23'}, 'Advisory': {'Hagupit': 'Advisory 1'}, 'Threat Potential': {'date': '2026-05-05 00:00:00', 'likelihood': 'ACTIVE'}}
-2026-05-06 23:42:56,700 - DEBUG - {
+2026-05-07 23:47:36,649 - DEBUG - Checking Website Response
+2026-05-07 23:47:36,650 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-05-07 23:47:38,616 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-05-07 23:47:39,003 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-05-07 23:47:39,759 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-05-07 23:47:40,136 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-05-07 23:47:40,964 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-05-07 23:47:41,323 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-05-07 23:47:41,324 - DEBUG - Checking Advisory
+2026-05-07 23:47:41,350 - INFO - Advisory found.
+2026-05-07 23:47:41,351 - INFO - Advisory Link: https://pubfiles.pagasa.dost.gov.ph/tamss/weather/tcadvisory.pdf#toolbar=0&navpanes=0&scrollbar=0
+2026-05-07 23:47:41,351 - INFO - Advisory Status: True
+2026-05-07 23:47:41,351 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-05-07 23:47:41,351 - DEBUG - Gathering Advisory Data
+2026-05-07 23:47:41,351 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-05-07 23:47:42,169 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /tamss/weather/tcadvisory.pdf HTTP/1.1" 200 413971
+2026-05-07 23:47:43,975 - INFO - Report Gathered: Advisory 3
+2026-05-07 23:47:43,975 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-05-07 23:47:43,975 - DEBUG - Checking Bulletin
+2026-05-07 23:47:44,001 - INFO - No Bulletin Found
+2026-05-07 23:47:44,001 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-05-07 23:47:44,001 - DEBUG - Checking bulletins/advisories for new updates.
+2026-05-07 23:47:44,001 - DEBUG - Checking advisories...
+2026-05-07 23:47:44,001 - INFO - Updating json.
+2026-05-07 23:47:44,001 - INFO - New update found. Sending advisory as notification.
+2026-05-07 23:47:44,002 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-05-07 23:47:44,274 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 477
+2026-05-07 23:47:44,275 - INFO - {'Bulletin': {'Basyang': 'Bulletin 23'}, 'Advisory': {'Hagupit': 'Advisory 3'}, 'Threat Potential': {'date': '2026-05-05 00:00:00', 'likelihood': 'ACTIVE'}}
+2026-05-07 23:47:44,275 - DEBUG - {
     "Bulletin": {
         "Basyang": "Bulletin 23"
     },
     "Advisory": {
-        "Hagupit": "Advisory 1"
+        "Hagupit": "Advisory 3"
     },
     "Threat Potential": {
         "date": "2026-05-05 00:00:00",
         "likelihood": "ACTIVE"
     }
 }
-2026-05-06 23:42:56,700 - DEBUG - Entire Process Executed
+2026-05-07 23:47:44,276 - DEBUG - Entire Process Executed
