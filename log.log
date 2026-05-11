@@ -1,35 +1,36 @@
-2026-05-10 23:43:36,036 - DEBUG - Checking Website Response
-2026-05-10 23:43:36,037 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-05-10 23:43:36,962 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-05-10 23:43:37,455 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-05-10 23:43:38,165 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-05-10 23:43:38,550 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-05-10 23:43:43,741 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-05-10 23:43:44,248 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-10 23:43:44,248 - DEBUG - Checking Advisory
-2026-05-10 23:43:44,276 - INFO - No Advisory Found
-2026-05-10 23:43:44,276 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-10 23:43:44,276 - DEBUG - Checking Bulletin
-2026-05-10 23:43:44,305 - INFO - Bulletin found.
-2026-05-10 23:43:44,305 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-10 23:43:44,305 - DEBUG - Gathering Bulletin Data
-2026-05-10 23:43:44,306 - INFO - Bulletin Storm Name: Caloy
-2026-05-10 23:43:44,306 - INFO - Bulletin Storm Intensity: Tropical Depression
-2026-05-10 23:43:44,306 - INFO - Bulletin Status: True
-2026-05-10 23:43:44,325 - INFO - Bulletin Signal Number: 0
-2026-05-10 23:43:44,325 - INFO - Bulletin Report Place: Consolacion
-2026-05-10 23:43:44,325 - INFO - Bulletin Wind Speed: 45 km/hr
-2026-05-10 23:43:44,325 - INFO - Gathered Bulletin 6
-2026-05-10 23:43:44,326 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-10 23:43:44,326 - DEBUG - Checking bulletins/advisories for new updates.
-2026-05-10 23:43:44,326 - DEBUG - Checking bulletins...
-2026-05-10 23:43:44,326 - INFO - New update found. Sending bulletin as notification.
-2026-05-10 23:43:44,326 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
-2026-05-10 23:43:44,590 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 469
-2026-05-10 23:43:44,591 - INFO - {'Bulletin': {'Caloy': 'Bulletin 6'}, 'Advisory': {'Hagupit': 'Advisory 5'}, 'Threat Potential': {'date': '2026-05-05 00:00:00', 'likelihood': 'ACTIVE'}}
-2026-05-10 23:43:44,592 - DEBUG - {
+2026-05-11 23:51:55,489 - DEBUG - Checking Website Response
+2026-05-11 23:51:55,490 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-05-11 23:51:57,207 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-05-11 23:51:57,605 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-05-11 23:51:59,279 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-05-11 23:51:59,683 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-05-11 23:52:00,436 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-05-11 23:52:00,870 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-05-11 23:52:00,870 - DEBUG - Checking Advisory
+2026-05-11 23:52:00,895 - INFO - No Advisory Found
+2026-05-11 23:52:00,895 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-05-11 23:52:00,895 - DEBUG - Checking Bulletin
+2026-05-11 23:52:00,920 - INFO - Bulletin found.
+2026-05-11 23:52:00,921 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-05-11 23:52:00,921 - DEBUG - Gathering Bulletin Data
+2026-05-11 23:52:00,921 - INFO - Bulletin Storm Name: Caloy
+2026-05-11 23:52:00,921 - INFO - Bulletin Storm Intensity: LPA
+2026-05-11 23:52:00,921 - INFO - Bulletin Status: True
+2026-05-11 23:52:00,938 - INFO - Bulletin Signal Number: 0
+2026-05-11 23:52:00,938 - INFO - Bulletin Report Place: Consolacion
+2026-05-11 23:52:00,938 - INFO - Bulletin Wind Speed: No wind speed found.
+2026-05-11 23:52:00,938 - INFO - Gathered Bulletin 9
+2026-05-11 23:52:00,938 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-05-11 23:52:00,938 - DEBUG - Checking bulletins/advisories for new updates.
+2026-05-11 23:52:00,938 - DEBUG - Checking bulletins...
+2026-05-11 23:52:00,939 - INFO - Updating json.
+2026-05-11 23:52:00,939 - INFO - Sending bulletin to email.
+2026-05-11 23:52:00,939 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-05-11 23:52:01,194 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 465
+2026-05-11 23:52:01,195 - INFO - {'Bulletin': {'Caloy': 'Bulletin 9'}, 'Advisory': {'Hagupit': 'Advisory 5'}, 'Threat Potential': {'date': '2026-05-05 00:00:00', 'likelihood': 'ACTIVE'}}
+2026-05-11 23:52:01,195 - DEBUG - {
     "Bulletin": {
-        "Caloy": "Bulletin 6"
+        "Caloy": "Bulletin 9"
     },
     "Advisory": {
         "Hagupit": "Advisory 5"
@@ -39,4 +40,4 @@
         "likelihood": "ACTIVE"
     }
 }
-2026-05-10 23:43:44,592 - DEBUG - Entire Process Executed
+2026-05-11 23:52:01,195 - DEBUG - Entire Process Executed
