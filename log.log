@@ -1,36 +1,36 @@
-2026-05-25 23:59:26,468 - DEBUG - Checking Website Response
-2026-05-25 23:59:26,469 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-05-25 23:59:27,312 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-05-25 23:59:27,755 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-05-25 23:59:29,418 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-05-25 23:59:30,009 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-05-25 23:59:34,973 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-05-25 23:59:35,409 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-25 23:59:35,409 - DEBUG - Checking Advisory
-2026-05-25 23:59:35,432 - INFO - No Advisory Found
-2026-05-25 23:59:35,432 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-25 23:59:35,432 - DEBUG - Checking Bulletin
-2026-05-25 23:59:35,454 - INFO - No Bulletin Found
-2026-05-25 23:59:35,454 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-25 23:59:35,454 - DEBUG - Checking Threat Potential
-2026-05-25 23:59:35,477 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
-2026-05-25 23:59:37,180 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 2256545
-2026-05-25 23:59:42,056 - INFO - Forecast Date: From May 25, 2026 to June 07, 2026
-2026-05-25 23:59:42,057 - INFO - Likelihood: HIGHLY LIKELY over the next two weeks
-2026-05-25 23:59:42,057 - INFO - Sending Threat Potential Report to email
-2026-05-25 23:59:42,057 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
-2026-05-25 23:59:42,256 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 438
-2026-05-25 23:59:42,257 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-25 23:59:42,257 - DEBUG - {
+2026-05-27 23:56:23,524 - DEBUG - Checking Website Response
+2026-05-27 23:56:23,525 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-05-27 23:56:25,815 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-05-27 23:56:26,322 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-05-27 23:56:27,470 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-05-27 23:56:28,186 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-05-27 23:56:29,157 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-05-27 23:56:29,652 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-05-27 23:56:29,653 - DEBUG - Checking Advisory
+2026-05-27 23:56:29,677 - INFO - Advisory found.
+2026-05-27 23:56:29,677 - INFO - Advisory Link: https://pubfiles.pagasa.dost.gov.ph/tamss/weather/tcadvisory.pdf#toolbar=0&navpanes=0&scrollbar=0
+2026-05-27 23:56:29,677 - INFO - Advisory Status: True
+2026-05-27 23:56:29,677 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-05-27 23:56:29,677 - DEBUG - Gathering Advisory Data
+2026-05-27 23:56:29,678 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-05-27 23:56:32,031 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /tamss/weather/tcadvisory.pdf HTTP/1.1" 200 558085
+2026-05-27 23:56:35,881 - INFO - Report Gathered: Advisory 4
+2026-05-27 23:56:35,881 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-05-27 23:56:35,882 - DEBUG - Checking Bulletin
+2026-05-27 23:56:35,904 - INFO - No Bulletin Found
+2026-05-27 23:56:35,904 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-05-27 23:56:35,904 - DEBUG - Checking bulletins/advisories for new updates.
+2026-05-27 23:56:35,904 - DEBUG - Checking advisories...
+2026-05-27 23:56:35,904 - INFO - Deleting key for Hagupit since it is no longer in incoming advisories
+2026-05-27 23:56:35,904 - INFO - {'Bulletin': {'Caloy': 'Bulletin 9'}, 'Advisory': {}, 'Threat Potential': {'date': '2026-05-25 00:00:00', 'likelihood': 'HIGHLY LIKELY'}}
+2026-05-27 23:56:35,904 - DEBUG - {
     "Bulletin": {
         "Caloy": "Bulletin 9"
     },
-    "Advisory": {
-        "Hagupit": "Advisory 5"
-    },
+    "Advisory": {},
     "Threat Potential": {
         "date": "2026-05-25 00:00:00",
         "likelihood": "HIGHLY LIKELY"
     }
 }
-2026-05-25 23:59:42,307 - DEBUG - Entire Process Executed
+2026-05-27 23:56:35,904 - DEBUG - Entire Process Executed

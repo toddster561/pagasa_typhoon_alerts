@@ -2,9 +2,7 @@
     "Bulletin": {
         "Caloy": "Bulletin 9"
     },
-    "Advisory": {
-        "Hagupit": "Advisory 5"
-    },
+    "Advisory": {},
     "Threat Potential": {
         "date": "2026-05-25 00:00:00",
         "likelihood": "HIGHLY LIKELY"
