@@ -1,36 +1,36 @@
-2026-05-27 23:56:23,524 - DEBUG - Checking Website Response
-2026-05-27 23:56:23,525 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-05-27 23:56:25,815 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-05-27 23:56:26,322 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-05-27 23:56:27,470 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-05-27 23:56:28,186 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-05-27 23:56:29,157 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-05-27 23:56:29,652 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-27 23:56:29,653 - DEBUG - Checking Advisory
-2026-05-27 23:56:29,677 - INFO - Advisory found.
-2026-05-27 23:56:29,677 - INFO - Advisory Link: https://pubfiles.pagasa.dost.gov.ph/tamss/weather/tcadvisory.pdf#toolbar=0&navpanes=0&scrollbar=0
-2026-05-27 23:56:29,677 - INFO - Advisory Status: True
-2026-05-27 23:56:29,677 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-27 23:56:29,677 - DEBUG - Gathering Advisory Data
-2026-05-27 23:56:29,678 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
-2026-05-27 23:56:32,031 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /tamss/weather/tcadvisory.pdf HTTP/1.1" 200 558085
-2026-05-27 23:56:35,881 - INFO - Report Gathered: Advisory 4
-2026-05-27 23:56:35,881 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-27 23:56:35,882 - DEBUG - Checking Bulletin
-2026-05-27 23:56:35,904 - INFO - No Bulletin Found
-2026-05-27 23:56:35,904 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-27 23:56:35,904 - DEBUG - Checking bulletins/advisories for new updates.
-2026-05-27 23:56:35,904 - DEBUG - Checking advisories...
-2026-05-27 23:56:35,904 - INFO - Deleting key for Hagupit since it is no longer in incoming advisories
-2026-05-27 23:56:35,904 - INFO - {'Bulletin': {'Caloy': 'Bulletin 9'}, 'Advisory': {}, 'Threat Potential': {'date': '2026-05-25 00:00:00', 'likelihood': 'HIGHLY LIKELY'}}
-2026-05-27 23:56:35,904 - DEBUG - {
-    "Bulletin": {
-        "Caloy": "Bulletin 9"
-    },
+2026-05-30 00:03:45,277 - DEBUG - Checking Website Response
+2026-05-30 00:03:45,278 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-05-30 00:03:47,828 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-05-30 00:03:48,527 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-05-30 00:03:50,486 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-05-30 00:03:51,008 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-05-30 00:03:52,723 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-05-30 00:03:53,196 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-05-30 00:03:53,196 - DEBUG - Checking Advisory
+2026-05-30 00:03:53,219 - INFO - No Advisory Found
+2026-05-30 00:03:53,219 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-05-30 00:03:53,219 - DEBUG - Checking Bulletin
+2026-05-30 00:03:53,245 - INFO - Bulletin found.
+2026-05-30 00:03:53,245 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-05-30 00:03:53,245 - DEBUG - Gathering Bulletin Data
+2026-05-30 00:03:53,245 - INFO - Bulletin Storm Name: Domeng
+2026-05-30 00:03:53,245 - INFO - Bulletin Storm Intensity: Severe Tropical Storm
+2026-05-30 00:03:53,245 - INFO - Bulletin Status: True
+2026-05-30 00:03:53,268 - INFO - Bulletin Signal Number: 0
+2026-05-30 00:03:53,268 - INFO - Bulletin Report Place: Consolacion
+2026-05-30 00:03:53,268 - INFO - Bulletin Wind Speed: 95 km/hr
+2026-05-30 00:03:53,268 - INFO - Gathered Bulletin 5
+2026-05-30 00:03:53,268 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-05-30 00:03:53,268 - DEBUG - Checking bulletins/advisories for new updates.
+2026-05-30 00:03:53,268 - DEBUG - Checking bulletins...
+2026-05-30 00:03:53,268 - INFO - Deleting key for Caloy because it is no longer in incoming bulletins
+2026-05-30 00:03:53,268 - INFO - {'Bulletin': {}, 'Advisory': {}, 'Threat Potential': {'date': '2026-05-25 00:00:00', 'likelihood': 'HIGHLY LIKELY'}}
+2026-05-30 00:03:53,268 - DEBUG - {
+    "Bulletin": {},
     "Advisory": {},
     "Threat Potential": {
         "date": "2026-05-25 00:00:00",
         "likelihood": "HIGHLY LIKELY"
     }
 }
-2026-05-27 23:56:35,904 - DEBUG - Entire Process Executed
+2026-05-30 00:03:53,269 - DEBUG - Entire Process Executed
