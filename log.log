@@ -1,35 +1,36 @@
-2026-05-30 23:55:51,509 - DEBUG - Checking Website Response
-2026-05-30 23:55:51,510 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-05-30 23:55:53,510 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-05-30 23:55:54,009 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-05-30 23:56:00,020 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-05-30 23:56:00,497 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-05-30 23:56:02,227 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-05-30 23:56:02,739 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-30 23:56:02,740 - DEBUG - Checking Advisory
-2026-05-30 23:56:02,763 - INFO - No Advisory Found
-2026-05-30 23:56:02,763 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-30 23:56:02,763 - DEBUG - Checking Bulletin
-2026-05-30 23:56:02,789 - INFO - Bulletin found.
-2026-05-30 23:56:02,789 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-30 23:56:02,789 - DEBUG - Gathering Bulletin Data
-2026-05-30 23:56:02,789 - INFO - Bulletin Storm Name: Domeng
-2026-05-30 23:56:02,789 - INFO - Bulletin Storm Intensity: Typhoon
-2026-05-30 23:56:02,789 - INFO - Bulletin Status: True
-2026-05-30 23:56:02,807 - INFO - Bulletin Signal Number: 0
-2026-05-30 23:56:02,807 - INFO - Bulletin Report Place: Consolacion
-2026-05-30 23:56:02,807 - INFO - Bulletin Wind Speed: 120 km/hr
-2026-05-30 23:56:02,808 - INFO - Gathered Bulletin 9
-2026-05-30 23:56:02,808 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-05-30 23:56:02,808 - DEBUG - Checking bulletins/advisories for new updates.
-2026-05-30 23:56:02,808 - DEBUG - Checking bulletins...
-2026-05-30 23:56:02,808 - INFO - New update found. Sending bulletin as notification.
-2026-05-30 23:56:02,808 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
-2026-05-30 23:56:02,930 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 459
-2026-05-30 23:56:02,931 - INFO - {'Bulletin': {'Domeng': 'Bulletin 9'}, 'Advisory': {}, 'Threat Potential': {'date': '2026-05-25 00:00:00', 'likelihood': 'HIGHLY LIKELY'}}
-2026-05-30 23:56:02,932 - DEBUG - {
+2026-06-01 00:00:31,485 - DEBUG - Checking Website Response
+2026-06-01 00:00:31,486 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-06-01 00:00:37,085 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-06-01 00:00:37,542 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-06-01 00:00:39,279 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-06-01 00:00:39,736 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-06-01 00:00:40,655 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-06-01 00:00:41,119 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-06-01 00:00:41,119 - DEBUG - Checking Advisory
+2026-06-01 00:00:41,147 - INFO - No Advisory Found
+2026-06-01 00:00:41,147 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-06-01 00:00:41,147 - DEBUG - Checking Bulletin
+2026-06-01 00:00:41,178 - INFO - Bulletin found.
+2026-06-01 00:00:41,178 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-06-01 00:00:41,178 - DEBUG - Gathering Bulletin Data
+2026-06-01 00:00:41,178 - INFO - Bulletin Storm Name: Domeng
+2026-06-01 00:00:41,178 - INFO - Bulletin Storm Intensity: Typhoon
+2026-06-01 00:00:41,178 - INFO - Bulletin Status: True
+2026-06-01 00:00:41,201 - INFO - Bulletin Signal Number: 0
+2026-06-01 00:00:41,201 - INFO - Bulletin Report Place: Consolacion
+2026-06-01 00:00:41,201 - INFO - Bulletin Wind Speed: 130 km/hr
+2026-06-01 00:00:41,201 - INFO - Gathered Bulletin 13
+2026-06-01 00:00:41,201 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-06-01 00:00:41,201 - DEBUG - Checking bulletins/advisories for new updates.
+2026-06-01 00:00:41,201 - DEBUG - Checking bulletins...
+2026-06-01 00:00:41,202 - INFO - Updating json.
+2026-06-01 00:00:41,202 - INFO - Sending bulletin to email.
+2026-06-01 00:00:41,202 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-06-01 00:00:41,479 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 459
+2026-06-01 00:00:41,480 - INFO - {'Bulletin': {'Domeng': 'Bulletin 13'}, 'Advisory': {}, 'Threat Potential': {'date': '2026-05-25 00:00:00', 'likelihood': 'HIGHLY LIKELY'}}
+2026-06-01 00:00:41,480 - DEBUG - {
     "Bulletin": {
-        "Domeng": "Bulletin 9"
+        "Domeng": "Bulletin 13"
     },
     "Advisory": {},
     "Threat Potential": {
@@ -37,4 +38,4 @@
         "likelihood": "HIGHLY LIKELY"
     }
 }
-2026-05-30 23:56:02,932 - DEBUG - Entire Process Executed
+2026-06-01 00:00:41,480 - DEBUG - Entire Process Executed
