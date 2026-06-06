@@ -1,40 +1,34 @@
-2026-06-06 00:00:59,348 - DEBUG - Checking Website Response
-2026-06-06 00:00:59,349 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-06-06 00:01:01,536 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-06-06 00:01:02,044 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-06-06 00:01:03,218 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-06-06 00:01:03,914 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-06-06 00:01:10,701 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-06-06 00:01:11,213 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-06-06 00:01:11,213 - DEBUG - Checking Advisory
-2026-06-06 00:01:11,237 - INFO - No Advisory Found
-2026-06-06 00:01:11,237 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-06-06 00:01:11,237 - DEBUG - Checking Bulletin
-2026-06-06 00:01:11,262 - INFO - Bulletin found.
-2026-06-06 00:01:11,262 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-06-06 00:01:11,262 - DEBUG - Gathering Bulletin Data
-2026-06-06 00:01:11,262 - INFO - Bulletin Storm Name: Ester
-2026-06-06 00:01:11,262 - INFO - Bulletin Storm Intensity: Tropical Depression
-2026-06-06 00:01:11,262 - INFO - Bulletin Status: True
-2026-06-06 00:01:11,294 - INFO - Bulletin Signal Number: 0
-2026-06-06 00:01:11,294 - INFO - Bulletin Report Place: Consolacion
-2026-06-06 00:01:11,294 - INFO - Bulletin Wind Speed: 45 km/hr
-2026-06-06 00:01:11,294 - INFO - Gathered Bulletin 5
-2026-06-06 00:01:11,294 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-06-06 00:01:11,294 - DEBUG - Checking bulletins/advisories for new updates.
-2026-06-06 00:01:11,294 - DEBUG - Checking bulletins...
-2026-06-06 00:01:11,294 - INFO - New update found. Sending bulletin as notification.
-2026-06-06 00:01:11,294 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
-2026-06-06 00:01:11,365 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 469
-2026-06-06 00:01:11,366 - INFO - {'Bulletin': {'Ester': 'Bulletin 5'}, 'Advisory': {}, 'Threat Potential': {'date': '2026-06-01 00:00:00', 'likelihood': 'LIKELY'}}
-2026-06-06 00:01:11,366 - DEBUG - {
+2026-06-06 23:58:20,772 - DEBUG - Checking Website Response
+2026-06-06 23:58:20,773 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-06-06 23:58:22,630 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-06-06 23:58:23,098 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-06-06 23:58:24,195 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-06-06 23:58:24,696 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-06-06 23:58:29,505 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-06-06 23:58:29,893 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-06-06 23:58:29,893 - DEBUG - Checking Advisory
+2026-06-06 23:58:29,914 - INFO - No Advisory Found
+2026-06-06 23:58:29,914 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-06-06 23:58:29,914 - DEBUG - Checking Bulletin
+2026-06-06 23:58:29,936 - INFO - No Bulletin Found
+2026-06-06 23:58:29,936 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-06-06 23:58:29,936 - DEBUG - Checking Threat Potential
+2026-06-06 23:58:29,958 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-06-06 23:58:35,684 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 2267273
+2026-06-06 23:58:38,491 - INFO - Forecast Date: From June 04, 2026 to June 17, 2026
+2026-06-06 23:58:38,491 - INFO - Likelihood: LIKELY over the next two weeks
+2026-06-06 23:58:38,491 - INFO - Sending Threat Potential Report to email
+2026-06-06 23:58:38,492 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-06-06 23:58:38,837 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 432
+2026-06-06 23:58:38,838 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-06-06 23:58:38,838 - DEBUG - {
     "Bulletin": {
         "Ester": "Bulletin 5"
     },
     "Advisory": {},
     "Threat Potential": {
-        "date": "2026-06-01 00:00:00",
+        "date": "2026-06-04 00:00:00",
         "likelihood": "LIKELY"
     }
 }
-2026-06-06 00:01:11,366 - DEBUG - Entire Process Executed
+2026-06-06 23:58:38,838 - DEBUG - Entire Process Executed
