@@ -1,5 +1,7 @@
 {
-    "Bulletin": {},
+    "Bulletin": {
+        "Ester": "Bulletin 5"
+    },
     "Advisory": {},
     "Threat Potential": {
         "date": "2026-06-01 00:00:00",
