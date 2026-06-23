@@ -1,38 +1,42 @@
-2026-06-22 00:05:14,685 - DEBUG - Checking Website Response
-2026-06-22 00:05:14,687 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-06-22 00:05:20,068 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-06-22 00:05:20,521 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-06-22 00:05:21,632 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-06-22 00:05:22,193 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-06-22 00:05:23,424 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-06-22 00:05:23,879 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-06-22 00:05:23,879 - DEBUG - Checking Advisory
-2026-06-22 00:05:23,904 - INFO - No Advisory Found
-2026-06-22 00:05:23,904 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-06-22 00:05:23,904 - DEBUG - Checking Bulletin
-2026-06-22 00:05:23,933 - INFO - Bulletin found.
-2026-06-22 00:05:23,933 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-06-22 00:05:23,933 - DEBUG - Gathering Bulletin Data
-2026-06-22 00:05:23,933 - INFO - Bulletin Storm Name: Francisco
-2026-06-22 00:05:23,933 - INFO - Bulletin Storm Intensity: Typhoon
-2026-06-22 00:05:23,933 - INFO - Bulletin Status: True
-2026-06-22 00:05:23,954 - INFO - Consolacion does not have a signal number.
-2026-06-22 00:05:23,954 - INFO - Cebu has signal number 0
-2026-06-22 00:05:23,954 - INFO - Bulletin Signal Number: 0
-2026-06-22 00:05:23,954 - INFO - Bulletin Report Place: Cebu
-2026-06-22 00:05:23,954 - INFO - Bulletin Wind Speed: 140 km/hr
-2026-06-22 00:05:23,954 - INFO - Gathered Bulletin 6
-2026-06-22 00:05:23,954 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-06-22 00:05:23,954 - DEBUG - Checking bulletins/advisories for new updates.
-2026-06-22 00:05:23,954 - DEBUG - Checking bulletins...
-2026-06-22 00:05:23,954 - INFO - Deleting key for Ester because it is no longer in incoming bulletins
-2026-06-22 00:05:23,954 - INFO - {'Bulletin': {}, 'Advisory': {}, 'Threat Potential': {'date': '2026-06-15 00:00:00', 'likelihood': 'LIKELY'}}
-2026-06-22 00:05:23,954 - DEBUG - {
-    "Bulletin": {},
+2026-06-23 00:00:47,663 - DEBUG - Checking Website Response
+2026-06-23 00:00:47,664 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-06-23 00:00:49,462 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-06-23 00:00:49,929 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-06-23 00:00:51,079 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-06-23 00:00:51,535 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-06-23 00:00:52,396 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-06-23 00:00:53,091 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-06-23 00:00:53,092 - DEBUG - Checking Advisory
+2026-06-23 00:00:53,115 - INFO - No Advisory Found
+2026-06-23 00:00:53,115 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-06-23 00:00:53,115 - DEBUG - Checking Bulletin
+2026-06-23 00:00:53,143 - INFO - Bulletin found.
+2026-06-23 00:00:53,143 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-06-23 00:00:53,143 - DEBUG - Gathering Bulletin Data
+2026-06-23 00:00:53,143 - INFO - Bulletin Storm Name: Francisco
+2026-06-23 00:00:53,143 - INFO - Bulletin Storm Intensity: Super Typhoon
+2026-06-23 00:00:53,143 - INFO - Bulletin Status: True
+2026-06-23 00:00:53,154 - INFO - Consolacion does not have a signal number.
+2026-06-23 00:00:53,154 - INFO - Cebu has signal number 0
+2026-06-23 00:00:53,154 - INFO - Bulletin Signal Number: 0
+2026-06-23 00:00:53,154 - INFO - Bulletin Report Place: Cebu
+2026-06-23 00:00:53,154 - INFO - Bulletin Wind Speed: 185 km/hr
+2026-06-23 00:00:53,154 - INFO - Gathered Bulletin 10
+2026-06-23 00:00:53,154 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-06-23 00:00:53,154 - DEBUG - Checking bulletins/advisories for new updates.
+2026-06-23 00:00:53,154 - DEBUG - Checking bulletins...
+2026-06-23 00:00:53,154 - INFO - New update found. Sending bulletin as notification.
+2026-06-23 00:00:53,155 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-06-23 00:00:53,380 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 461
+2026-06-23 00:00:53,381 - INFO - {'Bulletin': {'Francisco': 'Bulletin 10'}, 'Advisory': {}, 'Threat Potential': {'date': '2026-06-15 00:00:00', 'likelihood': 'LIKELY'}}
+2026-06-23 00:00:53,381 - DEBUG - {
+    "Bulletin": {
+        "Francisco": "Bulletin 10"
+    },
     "Advisory": {},
     "Threat Potential": {
         "date": "2026-06-15 00:00:00",
         "likelihood": "LIKELY"
     }
 }
-2026-06-22 00:05:23,954 - DEBUG - Entire Process Executed
+2026-06-23 00:00:53,381 - DEBUG - Entire Process Executed

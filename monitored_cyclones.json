@@ -1,5 +1,7 @@
 {
-    "Bulletin": {},
+    "Bulletin": {
+        "Francisco": "Bulletin 10"
+    },
     "Advisory": {},
     "Threat Potential": {
         "date": "2026-06-15 00:00:00",
