@@ -1,3 +1,42 @@
-2026-06-29 23:56:53,937 - DEBUG - Checking Website Response
-2026-06-29 23:56:53,938 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-06-29 23:57:03,644 - ERROR - Error: Site Unresponsive
+2026-07-01 00:01:11,076 - DEBUG - Checking Website Response
+2026-07-01 00:01:11,077 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-01 00:01:12,581 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-07-01 00:01:13,031 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-01 00:01:14,181 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-07-01 00:01:14,773 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-01 00:01:15,594 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-07-01 00:01:16,032 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-01 00:01:16,033 - DEBUG - Checking Advisory
+2026-07-01 00:01:16,061 - INFO - No Advisory Found
+2026-07-01 00:01:16,061 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-01 00:01:16,061 - DEBUG - Checking Bulletin
+2026-07-01 00:01:16,094 - INFO - Bulletin found.
+2026-07-01 00:01:16,094 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-01 00:01:16,094 - DEBUG - Gathering Bulletin Data
+2026-07-01 00:01:16,094 - INFO - Bulletin Storm Name: Henry
+2026-07-01 00:01:16,094 - INFO - Bulletin Storm Intensity: Tropical Depression
+2026-07-01 00:01:16,094 - INFO - Bulletin Status: True
+2026-07-01 00:01:16,120 - INFO - Consolacion does not have a signal number.
+2026-07-01 00:01:16,120 - INFO - Cebu has signal number 0
+2026-07-01 00:01:16,120 - INFO - Bulletin Signal Number: 0
+2026-07-01 00:01:16,120 - INFO - Bulletin Report Place: Cebu
+2026-07-01 00:01:16,120 - INFO - Bulletin Wind Speed: 45 km/hr
+2026-07-01 00:01:16,120 - INFO - Gathered Bulletin 1
+2026-07-01 00:01:16,120 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-01 00:01:16,120 - DEBUG - Checking bulletins/advisories for new updates.
+2026-07-01 00:01:16,120 - DEBUG - Checking bulletins...
+2026-07-01 00:01:16,120 - INFO - New update found. Sending bulletin as notification.
+2026-07-01 00:01:16,121 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-07-01 00:01:16,444 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 462
+2026-07-01 00:01:16,445 - INFO - {'Bulletin': {'Henry': 'Bulletin 1'}, 'Advisory': {}, 'Threat Potential': {'date': '2026-06-25 00:00:00', 'likelihood': 'ACTIVE'}}
+2026-07-01 00:01:16,445 - DEBUG - {
+    "Bulletin": {
+        "Henry": "Bulletin 1"
+    },
+    "Advisory": {},
+    "Threat Potential": {
+        "date": "2026-06-25 00:00:00",
+        "likelihood": "ACTIVE"
+    }
+}
+2026-07-01 00:01:16,446 - DEBUG - Entire Process Executed
