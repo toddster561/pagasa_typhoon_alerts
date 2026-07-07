@@ -2,7 +2,9 @@
     "Bulletin": {
         "Henry": "Bulletin 4"
     },
-    "Advisory": {},
+    "Advisory": {
+        "Bavi": "Advisory 2"
+    },
     "Threat Potential": {
         "date": "2026-07-01 00:00:00",
         "likelihood": "HIGHLY LIKELY"

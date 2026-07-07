@@ -1,31 +1,39 @@
-2026-07-06 00:00:31,207 - DEBUG - Checking Website Response
-2026-07-06 00:00:31,209 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-06 00:00:32,410 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-07-06 00:00:33,089 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-06 00:00:34,063 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-07-06 00:00:34,559 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-06 00:00:35,517 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-07-06 00:00:36,004 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-06 00:00:36,004 - DEBUG - Checking Advisory
-2026-07-06 00:00:36,032 - INFO - No Advisory Found
-2026-07-06 00:00:36,032 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-06 00:00:36,032 - DEBUG - Checking Bulletin
-2026-07-06 00:00:36,060 - INFO - No Bulletin Found
-2026-07-06 00:00:36,061 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-06 00:00:36,061 - DEBUG - Checking Threat Potential
-2026-07-06 00:00:36,090 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
-2026-07-06 00:00:37,262 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 4123055
-2026-07-06 00:00:40,690 - INFO - Forecast Date: From July 01, 2026 to July 14, 2026
-2026-07-06 00:00:40,690 - INFO - Likelihood: HIGHLY LIKELY over the next two weeks
-2026-07-06 00:00:40,690 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-06 00:00:40,691 - DEBUG - {
+2026-07-07 00:01:38,626 - DEBUG - Checking Website Response
+2026-07-07 00:01:38,627 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-07 00:01:39,952 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-07-07 00:01:40,666 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-07 00:01:41,757 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-07-07 00:01:42,249 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-07 00:01:43,526 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-07-07 00:01:44,235 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-07 00:01:44,236 - DEBUG - Checking Advisory
+2026-07-07 00:01:44,260 - INFO - Advisory found.
+2026-07-07 00:01:44,260 - INFO - Advisory Link: https://pubfiles.pagasa.dost.gov.ph/tamss/weather/tcadvisory.pdf#toolbar=0&navpanes=0&scrollbar=0
+2026-07-07 00:01:44,260 - INFO - Advisory Status: True
+2026-07-07 00:01:44,260 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-07 00:01:44,260 - DEBUG - Gathering Advisory Data
+2026-07-07 00:01:44,260 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-07-07 00:01:45,495 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /tamss/weather/tcadvisory.pdf HTTP/1.1" 200 428535
+2026-07-07 00:01:47,252 - INFO - Report Gathered: Advisory 2
+2026-07-07 00:01:47,252 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-07 00:01:47,252 - DEBUG - Checking Bulletin
+2026-07-07 00:01:47,275 - INFO - No Bulletin Found
+2026-07-07 00:01:47,275 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-07 00:01:47,275 - DEBUG - Checking bulletins/advisories for new updates.
+2026-07-07 00:01:47,275 - DEBUG - Checking advisories...
+2026-07-07 00:01:47,276 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-07-07 00:01:47,466 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 463
+2026-07-07 00:01:47,467 - INFO - {'Bulletin': {'Henry': 'Bulletin 4'}, 'Advisory': {'Bavi': 'Advisory 2'}, 'Threat Potential': {'date': '2026-07-01 00:00:00', 'likelihood': 'HIGHLY LIKELY'}}
+2026-07-07 00:01:47,467 - DEBUG - {
     "Bulletin": {
         "Henry": "Bulletin 4"
     },
-    "Advisory": {},
+    "Advisory": {
+        "Bavi": "Advisory 2"
+    },
     "Threat Potential": {
         "date": "2026-07-01 00:00:00",
         "likelihood": "HIGHLY LIKELY"
     }
 }
-2026-07-06 00:00:40,691 - DEBUG - Entire Process Executed
+2026-07-07 00:01:47,468 - DEBUG - Entire Process Executed
