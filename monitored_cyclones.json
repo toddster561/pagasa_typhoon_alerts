@@ -1,5 +1,7 @@
 {
-    "Bulletin": {},
+    "Bulletin": {
+        "Inday": "Bulletin 6"
+    },
     "Advisory": {
         "Bavi": "Advisory 2"
     },

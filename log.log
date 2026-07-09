@@ -1,34 +1,38 @@
-2026-07-07 23:51:56,732 - DEBUG - Checking Website Response
-2026-07-07 23:51:56,733 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-07 23:52:02,067 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-07-07 23:52:03,444 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-07 23:52:04,936 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-07-07 23:52:05,409 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-07 23:52:06,280 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-07-07 23:52:06,743 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-07 23:52:06,743 - DEBUG - Checking Advisory
-2026-07-07 23:52:06,771 - INFO - No Advisory Found
-2026-07-07 23:52:06,771 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-07 23:52:06,771 - DEBUG - Checking Bulletin
-2026-07-07 23:52:06,805 - INFO - Bulletin found.
-2026-07-07 23:52:06,805 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-07 23:52:06,805 - DEBUG - Gathering Bulletin Data
-2026-07-07 23:52:06,805 - INFO - Bulletin Storm Name: Inday
-2026-07-07 23:52:06,805 - INFO - Bulletin Storm Intensity: Super Typhoon
-2026-07-07 23:52:06,805 - INFO - Bulletin Status: True
-2026-07-07 23:52:06,823 - INFO - Consolacion does not have a signal number.
-2026-07-07 23:52:06,823 - INFO - Cebu has signal number 0
-2026-07-07 23:52:06,824 - INFO - Bulletin Signal Number: 0
-2026-07-07 23:52:06,824 - INFO - Bulletin Report Place: Cebu
-2026-07-07 23:52:06,824 - INFO - Bulletin Wind Speed: 185 km/hr
-2026-07-07 23:52:06,824 - INFO - Gathered Bulletin 2
-2026-07-07 23:52:06,824 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-07 23:52:06,824 - DEBUG - Checking bulletins/advisories for new updates.
-2026-07-07 23:52:06,824 - DEBUG - Checking bulletins...
-2026-07-07 23:52:06,824 - INFO - Deleting key for Henry because it is no longer in incoming bulletins
-2026-07-07 23:52:06,824 - INFO - {'Bulletin': {}, 'Advisory': {'Bavi': 'Advisory 2'}, 'Threat Potential': {'date': '2026-07-01 00:00:00', 'likelihood': 'HIGHLY LIKELY'}}
-2026-07-07 23:52:06,824 - DEBUG - {
-    "Bulletin": {},
+2026-07-09 00:02:53,438 - DEBUG - Checking Website Response
+2026-07-09 00:02:53,440 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-09 00:02:55,205 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-07-09 00:02:55,712 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-09 00:02:56,664 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-07-09 00:02:57,217 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-09 00:02:59,288 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-07-09 00:02:59,963 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-09 00:02:59,964 - DEBUG - Checking Advisory
+2026-07-09 00:02:59,992 - INFO - No Advisory Found
+2026-07-09 00:02:59,992 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-09 00:02:59,992 - DEBUG - Checking Bulletin
+2026-07-09 00:03:00,026 - INFO - Bulletin found.
+2026-07-09 00:03:00,026 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-09 00:03:00,026 - DEBUG - Gathering Bulletin Data
+2026-07-09 00:03:00,027 - INFO - Bulletin Storm Name: Inday
+2026-07-09 00:03:00,027 - INFO - Bulletin Storm Intensity: Typhoon
+2026-07-09 00:03:00,027 - INFO - Bulletin Status: True
+2026-07-09 00:03:00,049 - INFO - Consolacion does not have a signal number.
+2026-07-09 00:03:00,049 - INFO - Cebu has signal number 0
+2026-07-09 00:03:00,049 - INFO - Bulletin Signal Number: 0
+2026-07-09 00:03:00,049 - INFO - Bulletin Report Place: Cebu
+2026-07-09 00:03:00,049 - INFO - Bulletin Wind Speed: 175 km/hr
+2026-07-09 00:03:00,049 - INFO - Gathered Bulletin 6
+2026-07-09 00:03:00,049 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-09 00:03:00,049 - DEBUG - Checking bulletins/advisories for new updates.
+2026-07-09 00:03:00,049 - DEBUG - Checking bulletins...
+2026-07-09 00:03:00,049 - INFO - New update found. Sending bulletin as notification.
+2026-07-09 00:03:00,050 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-07-09 00:03:00,351 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 451
+2026-07-09 00:03:00,352 - INFO - {'Bulletin': {'Inday': 'Bulletin 6'}, 'Advisory': {'Bavi': 'Advisory 2'}, 'Threat Potential': {'date': '2026-07-01 00:00:00', 'likelihood': 'HIGHLY LIKELY'}}
+2026-07-09 00:03:00,353 - DEBUG - {
+    "Bulletin": {
+        "Inday": "Bulletin 6"
+    },
     "Advisory": {
         "Bavi": "Advisory 2"
     },
@@ -37,4 +41,4 @@
         "likelihood": "HIGHLY LIKELY"
     }
 }
-2026-07-07 23:52:06,824 - DEBUG - Entire Process Executed
+2026-07-09 00:03:00,353 - DEBUG - Entire Process Executed
