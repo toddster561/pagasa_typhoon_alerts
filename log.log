@@ -1,27 +1,32 @@
-2026-07-12 23:45:01,358 - DEBUG - Checking Website Response
-2026-07-12 23:45:01,359 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-12 23:45:02,351 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-07-12 23:45:02,785 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-12 23:45:04,295 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-07-12 23:45:04,730 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-12 23:45:05,886 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-07-12 23:45:06,490 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-12 23:45:06,491 - DEBUG - Checking Advisory
-2026-07-12 23:45:06,520 - INFO - No Advisory Found
-2026-07-12 23:45:06,520 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-12 23:45:06,520 - DEBUG - Checking Bulletin
-2026-07-12 23:45:06,550 - INFO - No Bulletin Found
-2026-07-12 23:45:06,550 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-12 23:45:06,550 - DEBUG - Checking Threat Potential
-2026-07-12 23:45:06,580 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
-2026-07-12 23:45:07,598 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 2266544
-2026-07-12 23:45:10,499 - INFO - Forecast Date: From July 09, 2026 to July 22, 2026
-2026-07-12 23:45:10,499 - INFO - Likelihood: ACTIVE over the next two weeks
-2026-07-12 23:45:10,499 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-12 23:45:10,500 - DEBUG - {
-    "Bulletin": {
-        "Inday": "Bulletin 14"
-    },
+2026-07-13 23:46:42,109 - DEBUG - Checking Website Response
+2026-07-13 23:46:42,110 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-13 23:46:44,273 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-07-13 23:46:44,994 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-13 23:46:46,026 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-07-13 23:46:46,572 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-13 23:46:47,686 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-07-13 23:46:48,211 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-13 23:46:48,211 - DEBUG - Checking Advisory
+2026-07-13 23:46:48,239 - INFO - No Advisory Found
+2026-07-13 23:46:48,239 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-13 23:46:48,239 - DEBUG - Checking Bulletin
+2026-07-13 23:46:48,268 - INFO - Bulletin found.
+2026-07-13 23:46:48,268 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-13 23:46:48,268 - DEBUG - Gathering Bulletin Data
+2026-07-13 23:46:48,269 - INFO - Bulletin Storm Name: Josie
+2026-07-13 23:46:48,269 - INFO - Bulletin Storm Intensity: Tropical Storm
+2026-07-13 23:46:48,269 - INFO - Bulletin Status: True
+2026-07-13 23:46:48,287 - INFO - Bulletin Signal Number: 0
+2026-07-13 23:46:48,287 - INFO - Bulletin Report Place: Consolacion
+2026-07-13 23:46:48,287 - INFO - Bulletin Wind Speed: 65 km/hr
+2026-07-13 23:46:48,287 - INFO - Gathered Bulletin 1
+2026-07-13 23:46:48,287 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-13 23:46:48,287 - DEBUG - Checking bulletins/advisories for new updates.
+2026-07-13 23:46:48,287 - DEBUG - Checking bulletins...
+2026-07-13 23:46:48,287 - INFO - Deleting key for Inday because it is no longer in incoming bulletins
+2026-07-13 23:46:48,287 - INFO - {'Bulletin': {}, 'Advisory': {'Bavi': 'Advisory 2'}, 'Threat Potential': {'date': '2026-07-09 00:00:00', 'likelihood': 'ACTIVE'}}
+2026-07-13 23:46:48,287 - DEBUG - {
+    "Bulletin": {},
     "Advisory": {
         "Bavi": "Advisory 2"
     },
@@ -30,4 +35,4 @@
         "likelihood": "ACTIVE"
     }
 }
-2026-07-12 23:45:10,500 - DEBUG - Entire Process Executed
+2026-07-13 23:46:48,287 - DEBUG - Entire Process Executed
