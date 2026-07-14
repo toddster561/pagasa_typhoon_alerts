@@ -1,38 +1,34 @@
-2026-07-13 23:46:42,109 - DEBUG - Checking Website Response
-2026-07-13 23:46:42,110 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-13 23:46:44,273 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-07-13 23:46:44,994 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-13 23:46:46,026 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-07-13 23:46:46,572 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-13 23:46:47,686 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-07-13 23:46:48,211 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-13 23:46:48,211 - DEBUG - Checking Advisory
-2026-07-13 23:46:48,239 - INFO - No Advisory Found
-2026-07-13 23:46:48,239 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-13 23:46:48,239 - DEBUG - Checking Bulletin
-2026-07-13 23:46:48,268 - INFO - Bulletin found.
-2026-07-13 23:46:48,268 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-13 23:46:48,268 - DEBUG - Gathering Bulletin Data
-2026-07-13 23:46:48,269 - INFO - Bulletin Storm Name: Josie
-2026-07-13 23:46:48,269 - INFO - Bulletin Storm Intensity: Tropical Storm
-2026-07-13 23:46:48,269 - INFO - Bulletin Status: True
-2026-07-13 23:46:48,287 - INFO - Bulletin Signal Number: 0
-2026-07-13 23:46:48,287 - INFO - Bulletin Report Place: Consolacion
-2026-07-13 23:46:48,287 - INFO - Bulletin Wind Speed: 65 km/hr
-2026-07-13 23:46:48,287 - INFO - Gathered Bulletin 1
-2026-07-13 23:46:48,287 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-13 23:46:48,287 - DEBUG - Checking bulletins/advisories for new updates.
-2026-07-13 23:46:48,287 - DEBUG - Checking bulletins...
-2026-07-13 23:46:48,287 - INFO - Deleting key for Inday because it is no longer in incoming bulletins
-2026-07-13 23:46:48,287 - INFO - {'Bulletin': {}, 'Advisory': {'Bavi': 'Advisory 2'}, 'Threat Potential': {'date': '2026-07-09 00:00:00', 'likelihood': 'ACTIVE'}}
-2026-07-13 23:46:48,287 - DEBUG - {
+2026-07-14 23:44:24,238 - DEBUG - Checking Website Response
+2026-07-14 23:44:24,240 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-14 23:44:25,712 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-07-14 23:44:26,162 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-14 23:44:27,221 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-07-14 23:44:27,819 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-14 23:44:29,117 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-07-14 23:44:29,509 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-14 23:44:29,510 - DEBUG - Checking Advisory
+2026-07-14 23:44:29,538 - INFO - No Advisory Found
+2026-07-14 23:44:29,538 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-14 23:44:29,538 - DEBUG - Checking Bulletin
+2026-07-14 23:44:29,569 - INFO - No Bulletin Found
+2026-07-14 23:44:29,569 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-14 23:44:29,569 - DEBUG - Checking Threat Potential
+2026-07-14 23:44:29,598 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-07-14 23:44:30,584 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 2351895
+2026-07-14 23:44:34,245 - INFO - Forecast Date: From July 13, 2026 to July 26, 2026
+2026-07-14 23:44:34,245 - INFO - Likelihood: ACTIVE over the next two weeks
+2026-07-14 23:44:34,245 - INFO - Sending Threat Potential Report to email
+2026-07-14 23:44:34,246 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-07-14 23:44:34,638 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 432
+2026-07-14 23:44:34,640 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-14 23:44:34,640 - DEBUG - {
     "Bulletin": {},
     "Advisory": {
         "Bavi": "Advisory 2"
     },
     "Threat Potential": {
-        "date": "2026-07-09 00:00:00",
+        "date": "2026-07-13 00:00:00",
         "likelihood": "ACTIVE"
     }
 }
-2026-07-13 23:46:48,287 - DEBUG - Entire Process Executed
+2026-07-14 23:44:34,640 - DEBUG - Entire Process Executed
