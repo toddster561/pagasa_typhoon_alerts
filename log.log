@@ -1,36 +1,27 @@
-2026-07-24 23:57:46,344 - DEBUG - Checking Website Response
-2026-07-24 23:57:46,345 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-24 23:57:51,469 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-07-24 23:57:51,808 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-24 23:57:52,795 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-07-24 23:57:53,134 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-24 23:57:54,144 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-07-24 23:57:54,482 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-24 23:57:54,482 - DEBUG - Checking Advisory
-2026-07-24 23:57:54,510 - INFO - No Advisory Found
-2026-07-24 23:57:54,510 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-24 23:57:54,510 - DEBUG - Checking Bulletin
-2026-07-24 23:57:54,544 - INFO - Bulletin found.
-2026-07-24 23:57:54,544 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-24 23:57:54,544 - DEBUG - Gathering Bulletin Data
-2026-07-24 23:57:54,544 - INFO - Bulletin Storm Name: Kiyapo
-2026-07-24 23:57:54,544 - INFO - Bulletin Storm Intensity: Typhoon
-2026-07-24 23:57:54,545 - INFO - Bulletin Status: True
-2026-07-24 23:57:54,607 - INFO - Consolacion does not have a signal number.
-2026-07-24 23:57:54,607 - INFO - Cebu has signal number 0
-2026-07-24 23:57:54,607 - INFO - Bulletin Signal Number: 0
-2026-07-24 23:57:54,607 - INFO - Bulletin Report Place: Cebu
-2026-07-24 23:57:54,607 - INFO - Bulletin Wind Speed: 120 km/hr
-2026-07-24 23:57:54,607 - INFO - Gathered Bulletin 15
-2026-07-24 23:57:54,607 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-24 23:57:54,607 - DEBUG - Checking bulletins/advisories for new updates.
-2026-07-24 23:57:54,607 - DEBUG - Checking bulletins...
-2026-07-24 23:57:54,607 - INFO - Updating json.
-2026-07-24 23:57:54,607 - INFO - Sending bulletin to email.
-2026-07-24 23:57:54,608 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
-2026-07-24 23:57:54,884 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 452
-2026-07-24 23:57:54,885 - INFO - {'Bulletin': {'Kiyapo': 'Bulletin 15'}, 'Advisory': {'Bavi': 'Advisory 2'}, 'Threat Potential': {'date': '2026-07-20 00:00:00', 'likelihood': 'LIKELY'}}
-2026-07-24 23:57:54,885 - DEBUG - {
+2026-07-25 23:53:37,709 - DEBUG - Checking Website Response
+2026-07-25 23:53:37,710 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-25 23:53:39,338 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-07-25 23:53:39,695 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-25 23:53:40,627 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-07-25 23:53:40,982 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-25 23:53:41,686 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-07-25 23:53:42,219 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-25 23:53:42,220 - DEBUG - Checking Advisory
+2026-07-25 23:53:42,234 - INFO - No Advisory Found
+2026-07-25 23:53:42,234 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-25 23:53:42,234 - DEBUG - Checking Bulletin
+2026-07-25 23:53:42,247 - INFO - No Bulletin Found
+2026-07-25 23:53:42,247 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-25 23:53:42,248 - DEBUG - Checking Threat Potential
+2026-07-25 23:53:42,262 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-07-25 23:53:44,103 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 3499744
+2026-07-25 23:53:47,580 - INFO - Forecast Date: From July 22, 2026 to August 04, 2026
+2026-07-25 23:53:47,580 - INFO - Likelihood: HIGHLY LIKELY over the next two weeks
+2026-07-25 23:53:47,580 - INFO - Sending Threat Potential Report to email
+2026-07-25 23:53:47,580 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-07-25 23:53:47,799 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 441
+2026-07-25 23:53:47,800 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-07-25 23:53:47,800 - DEBUG - {
     "Bulletin": {
         "Kiyapo": "Bulletin 15"
     },
@@ -38,8 +29,8 @@
         "Bavi": "Advisory 2"
     },
     "Threat Potential": {
-        "date": "2026-07-20 00:00:00",
-        "likelihood": "LIKELY"
+        "date": "2026-07-22 00:00:00",
+        "likelihood": "HIGHLY LIKELY"
     }
 }
-2026-07-24 23:57:54,885 - DEBUG - Entire Process Executed
+2026-07-25 23:53:47,800 - DEBUG - Entire Process Executed
