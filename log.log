@@ -1,36 +1,3 @@
-2026-07-27 23:56:54,068 - DEBUG - Checking Website Response
-2026-07-27 23:56:54,069 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-27 23:56:55,571 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-07-27 23:56:56,083 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-27 23:56:57,137 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-07-27 23:56:57,476 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-27 23:56:58,351 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-07-27 23:56:58,864 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-27 23:56:58,864 - DEBUG - Checking Advisory
-2026-07-27 23:56:58,882 - INFO - No Advisory Found
-2026-07-27 23:56:58,882 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-27 23:56:58,882 - DEBUG - Checking Bulletin
-2026-07-27 23:56:58,901 - INFO - No Bulletin Found
-2026-07-27 23:56:58,901 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-27 23:56:58,901 - DEBUG - Checking Threat Potential
-2026-07-27 23:56:58,919 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
-2026-07-27 23:57:00,403 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 3500303
-2026-07-27 23:57:05,397 - INFO - Forecast Date: From July 27, 2026 to August 09, 2026
-2026-07-27 23:57:05,397 - INFO - Likelihood: LESS over the next two weeks
-2026-07-27 23:57:05,397 - INFO - Sending Threat Potential Report to email
-2026-07-27 23:57:05,398 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
-2026-07-27 23:57:05,648 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 432
-2026-07-27 23:57:05,649 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-27 23:57:05,649 - DEBUG - {
-    "Bulletin": {
-        "Kiyapo": "Bulletin 15"
-    },
-    "Advisory": {
-        "Bavi": "Advisory 2"
-    },
-    "Threat Potential": {
-        "date": "2026-07-27 00:00:00",
-        "likelihood": "LESS"
-    }
-}
-2026-07-27 23:57:05,649 - DEBUG - Entire Process Executed
+2026-07-28 23:53:40,620 - DEBUG - Checking Website Response
+2026-07-28 23:53:40,622 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-07-28 23:53:49,877 - ERROR - Error: Site Unresponsive
