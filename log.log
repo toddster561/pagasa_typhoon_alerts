@@ -1,27 +1,34 @@
-2026-07-31 23:55:24,938 - DEBUG - Checking Website Response
-2026-07-31 23:55:24,940 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-31 23:55:30,982 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-07-31 23:55:31,664 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-31 23:55:32,862 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-07-31 23:55:33,310 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-07-31 23:55:34,190 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-07-31 23:55:34,857 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-31 23:55:34,858 - DEBUG - Checking Advisory
-2026-07-31 23:55:34,886 - INFO - No Advisory Found
-2026-07-31 23:55:34,886 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-31 23:55:34,886 - DEBUG - Checking Bulletin
-2026-07-31 23:55:34,913 - INFO - No Bulletin Found
-2026-07-31 23:55:34,913 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-31 23:55:34,913 - DEBUG - Checking Threat Potential
-2026-07-31 23:55:34,942 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
-2026-07-31 23:55:37,482 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 4303047
-2026-07-31 23:55:47,039 - INFO - Forecast Date: From July 30, 2026 to August 12, 2026
-2026-07-31 23:55:47,039 - INFO - Likelihood: LESS over the next two weeks
-2026-07-31 23:55:47,039 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-07-31 23:55:47,039 - DEBUG - {
-    "Bulletin": {
-        "Kiyapo": "Bulletin 15"
-    },
+2026-08-01 23:51:09,812 - DEBUG - Checking Website Response
+2026-08-01 23:51:09,813 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-01 23:51:11,584 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-08-01 23:51:11,923 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-01 23:51:13,017 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-08-01 23:51:13,355 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-01 23:51:14,280 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-08-01 23:51:14,619 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-01 23:51:14,620 - DEBUG - Checking Advisory
+2026-08-01 23:51:14,648 - INFO - No Advisory Found
+2026-08-01 23:51:14,648 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-01 23:51:14,648 - DEBUG - Checking Bulletin
+2026-08-01 23:51:14,681 - INFO - Bulletin found.
+2026-08-01 23:51:14,681 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-01 23:51:14,681 - DEBUG - Gathering Bulletin Data
+2026-08-01 23:51:14,681 - INFO - Bulletin Storm Name: Luis
+2026-08-01 23:51:14,681 - INFO - Bulletin Storm Intensity: Tropical Depression
+2026-08-01 23:51:14,682 - INFO - Bulletin Status: True
+2026-08-01 23:51:14,704 - INFO - Consolacion does not have a signal number.
+2026-08-01 23:51:14,704 - INFO - Cebu has signal number 0
+2026-08-01 23:51:14,704 - INFO - Bulletin Signal Number: 0
+2026-08-01 23:51:14,704 - INFO - Bulletin Report Place: Cebu
+2026-08-01 23:51:14,704 - INFO - Bulletin Wind Speed: 55 km/hr
+2026-08-01 23:51:14,704 - INFO - Gathered Bulletin 2
+2026-08-01 23:51:14,704 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-01 23:51:14,704 - DEBUG - Checking bulletins/advisories for new updates.
+2026-08-01 23:51:14,704 - DEBUG - Checking bulletins...
+2026-08-01 23:51:14,704 - INFO - Deleting key for Kiyapo because it is no longer in incoming bulletins
+2026-08-01 23:51:14,704 - INFO - {'Bulletin': {}, 'Advisory': {'Bavi': 'Advisory 2'}, 'Threat Potential': {'date': '2026-07-30 00:00:00', 'likelihood': 'LESS'}}
+2026-08-01 23:51:14,704 - DEBUG - {
+    "Bulletin": {},
     "Advisory": {
         "Bavi": "Advisory 2"
     },
@@ -30,4 +37,4 @@
         "likelihood": "LESS"
     }
 }
-2026-07-31 23:55:47,039 - DEBUG - Entire Process Executed
+2026-08-01 23:51:14,705 - DEBUG - Entire Process Executed
