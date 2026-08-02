@@ -1,34 +1,38 @@
-2026-08-01 23:51:09,812 - DEBUG - Checking Website Response
-2026-08-01 23:51:09,813 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-01 23:51:11,584 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-08-01 23:51:11,923 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-01 23:51:13,017 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-08-01 23:51:13,355 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-01 23:51:14,280 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-08-01 23:51:14,619 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-01 23:51:14,620 - DEBUG - Checking Advisory
-2026-08-01 23:51:14,648 - INFO - No Advisory Found
-2026-08-01 23:51:14,648 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-01 23:51:14,648 - DEBUG - Checking Bulletin
-2026-08-01 23:51:14,681 - INFO - Bulletin found.
-2026-08-01 23:51:14,681 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-01 23:51:14,681 - DEBUG - Gathering Bulletin Data
-2026-08-01 23:51:14,681 - INFO - Bulletin Storm Name: Luis
-2026-08-01 23:51:14,681 - INFO - Bulletin Storm Intensity: Tropical Depression
-2026-08-01 23:51:14,682 - INFO - Bulletin Status: True
-2026-08-01 23:51:14,704 - INFO - Consolacion does not have a signal number.
-2026-08-01 23:51:14,704 - INFO - Cebu has signal number 0
-2026-08-01 23:51:14,704 - INFO - Bulletin Signal Number: 0
-2026-08-01 23:51:14,704 - INFO - Bulletin Report Place: Cebu
-2026-08-01 23:51:14,704 - INFO - Bulletin Wind Speed: 55 km/hr
-2026-08-01 23:51:14,704 - INFO - Gathered Bulletin 2
-2026-08-01 23:51:14,704 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-01 23:51:14,704 - DEBUG - Checking bulletins/advisories for new updates.
-2026-08-01 23:51:14,704 - DEBUG - Checking bulletins...
-2026-08-01 23:51:14,704 - INFO - Deleting key for Kiyapo because it is no longer in incoming bulletins
-2026-08-01 23:51:14,704 - INFO - {'Bulletin': {}, 'Advisory': {'Bavi': 'Advisory 2'}, 'Threat Potential': {'date': '2026-07-30 00:00:00', 'likelihood': 'LESS'}}
-2026-08-01 23:51:14,704 - DEBUG - {
-    "Bulletin": {},
+2026-08-02 23:52:38,130 - DEBUG - Checking Website Response
+2026-08-02 23:52:38,132 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-02 23:52:40,121 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-08-02 23:52:40,543 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-02 23:52:41,538 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-08-02 23:52:42,166 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-02 23:52:43,257 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-08-02 23:52:43,885 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-02 23:52:43,886 - DEBUG - Checking Advisory
+2026-08-02 23:52:43,914 - INFO - No Advisory Found
+2026-08-02 23:52:43,914 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-02 23:52:43,914 - DEBUG - Checking Bulletin
+2026-08-02 23:52:43,947 - INFO - Bulletin found.
+2026-08-02 23:52:43,947 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-02 23:52:43,947 - DEBUG - Gathering Bulletin Data
+2026-08-02 23:52:43,948 - INFO - Bulletin Storm Name: Luis
+2026-08-02 23:52:43,948 - INFO - Bulletin Storm Intensity: Tropical Depression
+2026-08-02 23:52:43,948 - INFO - Bulletin Status: True
+2026-08-02 23:52:43,972 - INFO - Consolacion does not have a signal number.
+2026-08-02 23:52:43,972 - INFO - Cebu has signal number 0
+2026-08-02 23:52:43,972 - INFO - Bulletin Signal Number: 0
+2026-08-02 23:52:43,972 - INFO - Bulletin Report Place: Cebu
+2026-08-02 23:52:43,972 - INFO - Bulletin Wind Speed: 55 km/hr
+2026-08-02 23:52:43,972 - INFO - Gathered Bulletin 8
+2026-08-02 23:52:43,972 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-02 23:52:43,972 - DEBUG - Checking bulletins/advisories for new updates.
+2026-08-02 23:52:43,972 - DEBUG - Checking bulletins...
+2026-08-02 23:52:43,972 - INFO - New update found. Sending bulletin as notification.
+2026-08-02 23:52:43,973 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-08-02 23:52:44,095 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 461
+2026-08-02 23:52:44,097 - INFO - {'Bulletin': {'Luis': 'Bulletin 8'}, 'Advisory': {'Bavi': 'Advisory 2'}, 'Threat Potential': {'date': '2026-07-30 00:00:00', 'likelihood': 'LESS'}}
+2026-08-02 23:52:44,097 - DEBUG - {
+    "Bulletin": {
+        "Luis": "Bulletin 8"
+    },
     "Advisory": {
         "Bavi": "Advisory 2"
     },
@@ -37,4 +41,4 @@
         "likelihood": "LESS"
     }
 }
-2026-08-01 23:51:14,705 - DEBUG - Entire Process Executed
+2026-08-02 23:52:44,097 - DEBUG - Entire Process Executed
