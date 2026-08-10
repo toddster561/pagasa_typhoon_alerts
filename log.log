@@ -1,27 +1,27 @@
-2026-08-09 23:23:33,955 - DEBUG - Checking Website Response
-2026-08-09 23:23:33,957 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-09 23:23:35,752 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-08-09 23:23:36,379 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-09 23:23:37,433 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-08-09 23:23:37,852 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-09 23:23:38,675 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-08-09 23:23:39,300 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-09 23:23:39,300 - DEBUG - Checking Advisory
-2026-08-09 23:23:39,328 - INFO - No Advisory Found
-2026-08-09 23:23:39,328 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-09 23:23:39,328 - DEBUG - Checking Bulletin
-2026-08-09 23:23:39,358 - INFO - No Bulletin Found
-2026-08-09 23:23:39,358 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-09 23:23:39,358 - DEBUG - Checking Threat Potential
-2026-08-09 23:23:39,387 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
-2026-08-09 23:23:41,443 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 3418883
-2026-08-09 23:23:45,274 - INFO - Forecast Date: From August 06, 2026 to August 19, 2026
-2026-08-09 23:23:45,274 - ERROR - No Likelihood Found
-2026-08-09 23:23:45,274 - INFO - Sending Threat Potential Report to email
-2026-08-09 23:23:45,275 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
-2026-08-09 23:23:45,446 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 434
-2026-08-09 23:23:45,448 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-09 23:23:45,448 - DEBUG - {
+2026-08-10 23:27:39,660 - DEBUG - Checking Website Response
+2026-08-10 23:27:39,661 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-10 23:27:40,983 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-08-10 23:27:41,406 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-10 23:27:42,262 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-08-10 23:27:42,895 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-10 23:27:43,796 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-08-10 23:27:44,433 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-10 23:27:44,433 - DEBUG - Checking Advisory
+2026-08-10 23:27:44,452 - INFO - No Advisory Found
+2026-08-10 23:27:44,452 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-10 23:27:44,452 - DEBUG - Checking Bulletin
+2026-08-10 23:27:44,470 - INFO - No Bulletin Found
+2026-08-10 23:27:44,471 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-10 23:27:44,471 - DEBUG - Checking Threat Potential
+2026-08-10 23:27:44,489 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-08-10 23:27:45,697 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 3421699
+2026-08-10 23:27:51,816 - INFO - Forecast Date: From August 10, 2026 to August 23, 2026
+2026-08-10 23:27:51,816 - INFO - Likelihood: LESS over the next two weeks
+2026-08-10 23:27:51,817 - INFO - Sending Threat Potential Report to email
+2026-08-10 23:27:51,817 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-08-10 23:27:52,063 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 434
+2026-08-10 23:27:52,064 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-10 23:27:52,064 - DEBUG - {
     "Bulletin": {
         "Maymay": "Bulletin 17"
     },
@@ -29,8 +29,8 @@
         "Bavi": "Advisory 2"
     },
     "Threat Potential": {
-        "date": "2026-08-06 00:00:00",
-        "likelihood": null
+        "date": "2026-08-10 00:00:00",
+        "likelihood": "LESS"
     }
 }
-2026-08-09 23:23:45,448 - DEBUG - Entire Process Executed
+2026-08-10 23:27:52,064 - DEBUG - Entire Process Executed
