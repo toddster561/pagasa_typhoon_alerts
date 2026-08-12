@@ -1,24 +1,27 @@
-2026-08-11 23:32:05,516 - DEBUG - Checking Website Response
-2026-08-11 23:32:05,517 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-11 23:32:07,863 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-08-11 23:32:08,282 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-11 23:32:09,345 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-08-11 23:32:09,763 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-11 23:32:10,941 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-08-11 23:32:11,358 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-11 23:32:11,358 - DEBUG - Checking Advisory
-2026-08-11 23:32:11,381 - INFO - No Advisory Found
-2026-08-11 23:32:11,381 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-11 23:32:11,381 - DEBUG - Checking Bulletin
-2026-08-11 23:32:11,405 - INFO - No Bulletin Found
-2026-08-11 23:32:11,406 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-11 23:32:11,406 - DEBUG - Checking Threat Potential
-2026-08-11 23:32:11,429 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
-2026-08-11 23:32:12,841 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 3421699
-2026-08-11 23:32:16,436 - INFO - Forecast Date: From August 10, 2026 to August 23, 2026
-2026-08-11 23:32:16,436 - INFO - Likelihood: LESS over the next two weeks
-2026-08-11 23:32:16,436 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-11 23:32:16,436 - DEBUG - {
+2026-08-12 23:32:49,006 - DEBUG - Checking Website Response
+2026-08-12 23:32:49,007 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-12 23:32:54,685 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-08-12 23:32:55,276 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-12 23:32:56,367 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-08-12 23:32:56,762 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-12 23:32:57,898 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-08-12 23:32:58,292 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-12 23:32:58,292 - DEBUG - Checking Advisory
+2026-08-12 23:32:58,317 - INFO - No Advisory Found
+2026-08-12 23:32:58,318 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-12 23:32:58,318 - DEBUG - Checking Bulletin
+2026-08-12 23:32:58,343 - INFO - No Bulletin Found
+2026-08-12 23:32:58,343 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-12 23:32:58,343 - DEBUG - Checking Threat Potential
+2026-08-12 23:32:58,367 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-08-12 23:33:00,098 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 3437625
+2026-08-12 23:33:09,355 - INFO - Forecast Date: From August 12, 2026 to August 25, 2026
+2026-08-12 23:33:09,355 - INFO - Likelihood: LIKELY over the next two weeks
+2026-08-12 23:33:09,355 - INFO - Sending Threat Potential Report to email
+2026-08-12 23:33:09,355 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-08-12 23:33:09,551 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 436
+2026-08-12 23:33:09,552 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-12 23:33:09,552 - DEBUG - {
     "Bulletin": {
         "Maymay": "Bulletin 17"
     },
@@ -26,8 +29,8 @@
         "Bavi": "Advisory 2"
     },
     "Threat Potential": {
-        "date": "2026-08-10 00:00:00",
-        "likelihood": "LESS"
+        "date": "2026-08-12 00:00:00",
+        "likelihood": "LIKELY"
     }
 }
-2026-08-11 23:32:16,436 - DEBUG - Entire Process Executed
+2026-08-12 23:33:09,552 - DEBUG - Entire Process Executed
