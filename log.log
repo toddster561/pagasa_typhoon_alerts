@@ -1,32 +1,36 @@
-2026-08-18 23:14:39,654 - DEBUG - Checking Website Response
-2026-08-18 23:14:39,655 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-18 23:14:41,044 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-08-18 23:14:41,537 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-18 23:14:44,799 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-08-18 23:14:45,473 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-18 23:14:47,202 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-08-18 23:14:47,694 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-18 23:14:47,694 - DEBUG - Checking Advisory
-2026-08-18 23:14:47,722 - INFO - No Advisory Found
-2026-08-18 23:14:47,722 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-18 23:14:47,722 - DEBUG - Checking Bulletin
-2026-08-18 23:14:47,753 - INFO - Bulletin found.
-2026-08-18 23:14:47,753 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-18 23:14:47,753 - DEBUG - Gathering Bulletin Data
-2026-08-18 23:14:47,753 - INFO - Bulletin Storm Name: Neneng
-2026-08-18 23:14:47,753 - INFO - Bulletin Storm Intensity: Tropical Depression
-2026-08-18 23:14:47,753 - INFO - Bulletin Status: True
-2026-08-18 23:14:47,771 - INFO - Bulletin Signal Number: 0
-2026-08-18 23:14:47,771 - INFO - Bulletin Report Place: Consolacion
-2026-08-18 23:14:47,771 - INFO - Bulletin Wind Speed: 55 km/hr
-2026-08-18 23:14:47,771 - INFO - Gathered Bulletin 3
-2026-08-18 23:14:47,771 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-18 23:14:47,771 - DEBUG - Checking bulletins/advisories for new updates.
-2026-08-18 23:14:47,771 - DEBUG - Checking bulletins...
-2026-08-18 23:14:47,771 - INFO - Deleting key for Maymay because it is no longer in incoming bulletins
-2026-08-18 23:14:47,771 - INFO - {'Bulletin': {}, 'Advisory': {'Bavi': 'Advisory 2'}, 'Threat Potential': {'date': '2026-08-17 00:00:00', 'likelihood': 'HIGHLY LIKELY'}}
-2026-08-18 23:14:47,771 - DEBUG - {
-    "Bulletin": {},
+2026-08-19 23:16:01,468 - DEBUG - Checking Website Response
+2026-08-19 23:16:01,469 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-19 23:16:02,442 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-08-19 23:16:03,112 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-19 23:16:04,839 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-08-19 23:16:05,365 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-19 23:16:06,332 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-08-19 23:16:06,824 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-19 23:16:06,824 - DEBUG - Checking Advisory
+2026-08-19 23:16:06,852 - INFO - No Advisory Found
+2026-08-19 23:16:06,852 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-19 23:16:06,852 - DEBUG - Checking Bulletin
+2026-08-19 23:16:06,882 - INFO - Bulletin found.
+2026-08-19 23:16:06,882 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-19 23:16:06,883 - DEBUG - Gathering Bulletin Data
+2026-08-19 23:16:06,883 - INFO - Bulletin Storm Name: Neneng
+2026-08-19 23:16:06,883 - INFO - Bulletin Storm Intensity: Tropical Depression
+2026-08-19 23:16:06,883 - INFO - Bulletin Status: True
+2026-08-19 23:16:06,907 - INFO - Bulletin Signal Number: 0
+2026-08-19 23:16:06,907 - INFO - Bulletin Report Place: Consolacion
+2026-08-19 23:16:06,907 - INFO - Bulletin Wind Speed: 45 km/hr
+2026-08-19 23:16:06,907 - INFO - Gathered Bulletin 7
+2026-08-19 23:16:06,907 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-19 23:16:06,907 - DEBUG - Checking bulletins/advisories for new updates.
+2026-08-19 23:16:06,907 - DEBUG - Checking bulletins...
+2026-08-19 23:16:06,907 - INFO - New update found. Sending bulletin as notification.
+2026-08-19 23:16:06,908 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-08-19 23:16:07,143 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 470
+2026-08-19 23:16:07,144 - INFO - {'Bulletin': {'Neneng': 'Bulletin 7'}, 'Advisory': {'Bavi': 'Advisory 2'}, 'Threat Potential': {'date': '2026-08-17 00:00:00', 'likelihood': 'HIGHLY LIKELY'}}
+2026-08-19 23:16:07,144 - DEBUG - {
+    "Bulletin": {
+        "Neneng": "Bulletin 7"
+    },
     "Advisory": {
         "Bavi": "Advisory 2"
     },
@@ -35,4 +39,4 @@
         "likelihood": "HIGHLY LIKELY"
     }
 }
-2026-08-18 23:14:47,771 - DEBUG - Entire Process Executed
+2026-08-19 23:16:07,144 - DEBUG - Entire Process Executed
