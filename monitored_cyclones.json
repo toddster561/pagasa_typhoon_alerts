@@ -2,9 +2,7 @@
     "Bulletin": {
         "Neneng": "Bulletin 7"
     },
-    "Advisory": {
-        "Bavi": "Advisory 2"
-    },
+    "Advisory": {},
     "Threat Potential": {
         "date": "2026-08-20 00:00:00",
         "likelihood": null
