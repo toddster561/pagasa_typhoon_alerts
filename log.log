@@ -1,33 +1,32 @@
-2026-08-23 23:13:18,769 - DEBUG - Checking Website Response
-2026-08-23 23:13:18,770 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-23 23:13:20,855 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-08-23 23:13:21,556 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-23 23:13:23,160 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-08-23 23:13:23,867 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-23 23:13:25,340 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-08-23 23:13:26,050 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-23 23:13:26,051 - DEBUG - Checking Advisory
-2026-08-23 23:13:26,078 - INFO - Advisory found.
-2026-08-23 23:13:26,078 - INFO - Advisory Link: https://pubfiles.pagasa.dost.gov.ph/tamss/weather/tcadvisory.pdf#toolbar=0&navpanes=0&scrollbar=0
-2026-08-23 23:13:26,078 - INFO - Advisory Status: True
-2026-08-23 23:13:26,078 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-23 23:13:26,078 - DEBUG - Gathering Advisory Data
-2026-08-23 23:13:26,079 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
-2026-08-23 23:13:28,353 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /tamss/weather/tcadvisory.pdf HTTP/1.1" 200 415656
-2026-08-23 23:13:30,277 - INFO - Report Gathered: Advisory 3
-2026-08-23 23:13:30,278 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-23 23:13:30,278 - DEBUG - Checking Bulletin
-2026-08-23 23:13:30,306 - INFO - No Bulletin Found
-2026-08-23 23:13:30,306 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-23 23:13:30,306 - DEBUG - Checking bulletins/advisories for new updates.
-2026-08-23 23:13:30,306 - DEBUG - Checking advisories...
-2026-08-23 23:13:30,307 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
-2026-08-23 23:13:30,467 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 459
-2026-08-23 23:13:30,468 - INFO - {'Bulletin': {'Neneng': 'Bulletin 7'}, 'Advisory': {'Saudel': 'Advisory 3'}, 'Threat Potential': {'date': '2026-08-20 00:00:00', 'likelihood': None}}
-2026-08-23 23:13:30,469 - DEBUG - {
-    "Bulletin": {
-        "Neneng": "Bulletin 7"
-    },
+2026-08-24 23:16:18,087 - DEBUG - Checking Website Response
+2026-08-24 23:16:18,088 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-24 23:16:19,187 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-08-24 23:16:19,740 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-24 23:16:22,246 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-08-24 23:16:22,775 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-24 23:16:24,353 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-08-24 23:16:24,873 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-24 23:16:24,873 - DEBUG - Checking Advisory
+2026-08-24 23:16:24,897 - INFO - No Advisory Found
+2026-08-24 23:16:24,897 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-24 23:16:24,897 - DEBUG - Checking Bulletin
+2026-08-24 23:16:24,923 - INFO - Bulletin found.
+2026-08-24 23:16:24,923 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-24 23:16:24,923 - DEBUG - Gathering Bulletin Data
+2026-08-24 23:16:24,923 - INFO - Bulletin Storm Name: Obet
+2026-08-24 23:16:24,923 - INFO - Bulletin Storm Intensity: Typhoon
+2026-08-24 23:16:24,923 - INFO - Bulletin Status: True
+2026-08-24 23:16:24,933 - INFO - Bulletin Signal Number: 0
+2026-08-24 23:16:24,934 - INFO - Bulletin Report Place: Consolacion
+2026-08-24 23:16:24,934 - INFO - Bulletin Wind Speed: 155 km/hr
+2026-08-24 23:16:24,934 - INFO - Gathered Bulletin 2
+2026-08-24 23:16:24,934 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-24 23:16:24,934 - DEBUG - Checking bulletins/advisories for new updates.
+2026-08-24 23:16:24,934 - DEBUG - Checking bulletins...
+2026-08-24 23:16:24,934 - INFO - Deleting key for Neneng because it is no longer in incoming bulletins
+2026-08-24 23:16:24,934 - INFO - {'Bulletin': {}, 'Advisory': {'Saudel': 'Advisory 3'}, 'Threat Potential': {'date': '2026-08-20 00:00:00', 'likelihood': None}}
+2026-08-24 23:16:24,934 - DEBUG - {
+    "Bulletin": {},
     "Advisory": {
         "Saudel": "Advisory 3"
     },
@@ -36,4 +35,4 @@
         "likelihood": null
     }
 }
-2026-08-23 23:13:30,469 - DEBUG - Entire Process Executed
+2026-08-24 23:16:24,934 - DEBUG - Entire Process Executed
