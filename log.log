@@ -1,38 +1,34 @@
-2026-08-24 23:16:18,087 - DEBUG - Checking Website Response
-2026-08-24 23:16:18,088 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-24 23:16:19,187 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-08-24 23:16:19,740 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-24 23:16:22,246 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-08-24 23:16:22,775 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-08-24 23:16:24,353 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-08-24 23:16:24,873 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-24 23:16:24,873 - DEBUG - Checking Advisory
-2026-08-24 23:16:24,897 - INFO - No Advisory Found
-2026-08-24 23:16:24,897 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-24 23:16:24,897 - DEBUG - Checking Bulletin
-2026-08-24 23:16:24,923 - INFO - Bulletin found.
-2026-08-24 23:16:24,923 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-24 23:16:24,923 - DEBUG - Gathering Bulletin Data
-2026-08-24 23:16:24,923 - INFO - Bulletin Storm Name: Obet
-2026-08-24 23:16:24,923 - INFO - Bulletin Storm Intensity: Typhoon
-2026-08-24 23:16:24,923 - INFO - Bulletin Status: True
-2026-08-24 23:16:24,933 - INFO - Bulletin Signal Number: 0
-2026-08-24 23:16:24,934 - INFO - Bulletin Report Place: Consolacion
-2026-08-24 23:16:24,934 - INFO - Bulletin Wind Speed: 155 km/hr
-2026-08-24 23:16:24,934 - INFO - Gathered Bulletin 2
-2026-08-24 23:16:24,934 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-08-24 23:16:24,934 - DEBUG - Checking bulletins/advisories for new updates.
-2026-08-24 23:16:24,934 - DEBUG - Checking bulletins...
-2026-08-24 23:16:24,934 - INFO - Deleting key for Neneng because it is no longer in incoming bulletins
-2026-08-24 23:16:24,934 - INFO - {'Bulletin': {}, 'Advisory': {'Saudel': 'Advisory 3'}, 'Threat Potential': {'date': '2026-08-20 00:00:00', 'likelihood': None}}
-2026-08-24 23:16:24,934 - DEBUG - {
+2026-08-25 23:18:39,718 - DEBUG - Checking Website Response
+2026-08-25 23:18:39,719 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-25 23:18:41,444 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-08-25 23:18:41,856 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-25 23:18:42,680 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-08-25 23:18:43,090 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-08-25 23:18:44,719 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-08-25 23:18:45,157 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-25 23:18:45,158 - DEBUG - Checking Advisory
+2026-08-25 23:18:45,171 - INFO - No Advisory Found
+2026-08-25 23:18:45,171 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-25 23:18:45,171 - DEBUG - Checking Bulletin
+2026-08-25 23:18:45,184 - INFO - No Bulletin Found
+2026-08-25 23:18:45,184 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-25 23:18:45,184 - DEBUG - Checking Threat Potential
+2026-08-25 23:18:45,198 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-08-25 23:18:48,812 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 3000092
+2026-08-25 23:18:51,435 - INFO - Forecast Date: From August 24, 2026 to September 06, 2026
+2026-08-25 23:18:51,436 - ERROR - No Likelihood Found
+2026-08-25 23:18:51,436 - INFO - Sending Threat Potential Report to email
+2026-08-25 23:18:51,436 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-08-25 23:18:51,723 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 437
+2026-08-25 23:18:51,725 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-08-25 23:18:51,725 - DEBUG - {
     "Bulletin": {},
     "Advisory": {
         "Saudel": "Advisory 3"
     },
     "Threat Potential": {
-        "date": "2026-08-20 00:00:00",
+        "date": "2026-08-24 00:00:00",
         "likelihood": null
     }
 }
-2026-08-24 23:16:24,934 - DEBUG - Entire Process Executed
+2026-08-25 23:18:51,725 - DEBUG - Entire Process Executed
