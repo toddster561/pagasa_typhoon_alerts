@@ -1,34 +1,27 @@
-2026-09-03 00:53:40,232 - DEBUG - Checking Website Response
-2026-09-03 00:53:40,233 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-09-03 00:53:42,453 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-09-03 00:53:43,014 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-09-03 00:53:44,080 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-09-03 00:53:44,668 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-09-03 00:53:46,631 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-09-03 00:53:47,217 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-09-03 00:53:47,217 - DEBUG - Checking Advisory
-2026-09-03 00:53:47,241 - INFO - No Advisory Found
-2026-09-03 00:53:47,241 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-09-03 00:53:47,241 - DEBUG - Checking Bulletin
-2026-09-03 00:53:47,267 - INFO - Bulletin found.
-2026-09-03 00:53:47,267 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-09-03 00:53:47,267 - DEBUG - Gathering Bulletin Data
-2026-09-03 00:53:47,268 - INFO - Bulletin Storm Name: Pilandok
-2026-09-03 00:53:47,268 - INFO - Bulletin Storm Intensity: Tropical Storm
-2026-09-03 00:53:47,268 - INFO - Bulletin Status: True
-2026-09-03 00:53:47,287 - INFO - Bulletin Signal Number: 0
-2026-09-03 00:53:47,287 - INFO - Bulletin Report Place: Consolacion
-2026-09-03 00:53:47,287 - INFO - Bulletin Wind Speed: 75 km/hr
-2026-09-03 00:53:47,287 - INFO - Gathered Bulletin 16
-2026-09-03 00:53:47,287 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-09-03 00:53:47,287 - DEBUG - Checking bulletins/advisories for new updates.
-2026-09-03 00:53:47,287 - DEBUG - Checking bulletins...
-2026-09-03 00:53:47,287 - INFO - Updating json.
-2026-09-03 00:53:47,287 - INFO - Sending bulletin to email.
-2026-09-03 00:53:47,288 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
-2026-09-03 00:53:47,477 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 467
-2026-09-03 00:53:47,478 - INFO - {'Bulletin': {'Pilandok': 'Bulletin 16'}, 'Advisory': {'Saudel': 'Advisory 3'}, 'Threat Potential': {'date': '2026-08-27 00:00:00', 'likelihood': 'HIGHLY LIKELY'}}
-2026-09-03 00:53:47,478 - DEBUG - {
+2026-09-04 00:35:44,813 - DEBUG - Checking Website Response
+2026-09-04 00:35:44,815 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-09-04 00:35:45,879 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-09-04 00:35:46,388 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-09-04 00:35:48,213 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-09-04 00:35:48,772 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-09-04 00:35:49,768 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-09-04 00:35:50,301 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-09-04 00:35:50,302 - DEBUG - Checking Advisory
+2026-09-04 00:35:50,330 - INFO - No Advisory Found
+2026-09-04 00:35:50,330 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-09-04 00:35:50,330 - DEBUG - Checking Bulletin
+2026-09-04 00:35:50,359 - INFO - No Bulletin Found
+2026-09-04 00:35:50,359 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-09-04 00:35:50,359 - DEBUG - Checking Threat Potential
+2026-09-04 00:35:50,388 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-09-04 00:35:52,669 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 1553291
+2026-09-04 00:35:56,716 - INFO - Forecast Date: From September 03, 2026 to September 16, 2026
+2026-09-04 00:35:56,716 - ERROR - No Likelihood Found
+2026-09-04 00:35:56,716 - INFO - Sending Threat Potential Report to email
+2026-09-04 00:35:56,717 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-09-04 00:35:56,845 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 440
+2026-09-04 00:35:56,847 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-09-04 00:35:56,847 - DEBUG - {
     "Bulletin": {
         "Pilandok": "Bulletin 16"
     },
@@ -36,8 +29,8 @@
         "Saudel": "Advisory 3"
     },
     "Threat Potential": {
-        "date": "2026-08-27 00:00:00",
-        "likelihood": "HIGHLY LIKELY"
+        "date": "2026-09-03 00:00:00",
+        "likelihood": null
     }
 }
-2026-09-03 00:53:47,478 - DEBUG - Entire Process Executed
+2026-09-04 00:35:56,847 - DEBUG - Entire Process Executed
