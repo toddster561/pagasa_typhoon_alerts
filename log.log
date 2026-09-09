@@ -1,27 +1,27 @@
-2026-09-08 00:50:57,416 - DEBUG - Checking Website Response
-2026-09-08 00:50:57,417 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-09-08 00:50:58,576 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-09-08 00:50:59,180 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-09-08 00:51:00,288 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-09-08 00:51:01,082 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-09-08 00:51:02,243 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-09-08 00:51:02,839 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-09-08 00:51:02,840 - DEBUG - Checking Advisory
-2026-09-08 00:51:02,856 - INFO - No Advisory Found
-2026-09-08 00:51:02,856 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-09-08 00:51:02,856 - DEBUG - Checking Bulletin
-2026-09-08 00:51:02,872 - INFO - No Bulletin Found
-2026-09-08 00:51:02,872 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-09-08 00:51:02,872 - DEBUG - Checking Threat Potential
-2026-09-08 00:51:02,888 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
-2026-09-08 00:51:05,132 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 1549464
-2026-09-08 00:51:11,261 - INFO - Forecast Date: From September 07, 2026 to September 20, 2026
-2026-09-08 00:51:11,261 - ERROR - No Likelihood Found
-2026-09-08 00:51:11,261 - INFO - Sending Threat Potential Report to email
-2026-09-08 00:51:11,261 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
-2026-09-08 00:51:11,458 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 440
-2026-09-08 00:51:11,459 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-09-08 00:51:11,459 - DEBUG - {
+2026-09-09 00:56:37,885 - DEBUG - Checking Website Response
+2026-09-09 00:56:37,886 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-09-09 00:56:40,059 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-09-09 00:56:40,852 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-09-09 00:56:42,802 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-09-09 00:56:43,405 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-09-09 00:56:45,731 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-09-09 00:56:46,541 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-09-09 00:56:46,541 - DEBUG - Checking Advisory
+2026-09-09 00:56:46,566 - INFO - No Advisory Found
+2026-09-09 00:56:46,566 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-09-09 00:56:46,566 - DEBUG - Checking Bulletin
+2026-09-09 00:56:46,592 - INFO - No Bulletin Found
+2026-09-09 00:56:46,592 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-09-09 00:56:46,592 - DEBUG - Checking Threat Potential
+2026-09-09 00:56:46,616 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-09-09 00:56:48,515 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 1549464
+2026-09-09 00:56:52,122 - INFO - Forecast Date: From September 07, 2026 to September 20, 2026
+2026-09-09 00:56:52,122 - ERROR - No Likelihood Found
+2026-09-09 00:56:52,122 - INFO - Sending Threat Potential Report to email
+2026-09-09 00:56:52,123 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-09-09 00:56:52,424 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 440
+2026-09-09 00:56:52,425 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-09-09 00:56:52,425 - DEBUG - {
     "Bulletin": {
         "Pilandok": "Bulletin 16"
     },
@@ -33,4 +33,4 @@
         "likelihood": null
     }
 }
-2026-09-08 00:51:11,460 - DEBUG - Entire Process Executed
+2026-09-09 00:56:52,426 - DEBUG - Entire Process Executed
