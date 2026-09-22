@@ -85,7 +85,7 @@ try:
 except Exception:
     error("Error: Site Unresponsive")
     sys.exit()
-print("Elapsed:", time.time() - start, "seconds")
+print("Website Parsing Time:", time.time() - start, "seconds")
 start = time.time()
 debug("~~~~~~~~~~~~~~~~~~")
 #####################################################################################################
@@ -119,7 +119,7 @@ try:
     info("Advisory found.")
     info(f"Advisory Link: {advisory_link}")
     info(f"Advisory Status: {advisory_stat}")
-    print("Elapsed:", time.time() - start, "seconds")
+    print("Advisory Parsing Time:", time.time() - start, "seconds")
     debug("~~~~~~~~~~~~~~~~~~")
 
 except IndexError:
@@ -182,13 +182,21 @@ if advisory_stat:
     match = re.search(pattern, text)
     typhoon_name = typhoon_intensity = "Unknown"
     if match:
-        typhoon = match.group(1).split()
-        typhoon_name = typhoon.pop().replace('"', '').capitalize()
-        typhoon_intensity = " ".join(typhoon).title()
+        # Catches Report class errors due to Tropical Depression and LPA not having names
+        typhoon = match.group(1).strip()
+        if typhoon not in ("Tropical Depression", "LPA", "Low Pressure Area"):
+            typhoon = typhoon.split()
+            typhoon_name = typhoon.pop().replace('"', '').capitalize()
+            typhoon_intensity = " ".join(typhoon).title()
+        else:
+            typhoon_name = ""
+            typhoon_intensity = typhoon
     else:
         error("No Cyclone Name and Intensity Found")
 
+
     # Searches for cyclone wind speed
+    wind_speed = None
     pattern = r"Maximum\s+sustained\s+winds\s+of\s+(\d+)\s*km/hr?"
     match = re.search(pattern, text)
     if match:
@@ -202,10 +210,12 @@ if advisory_stat:
         # track = str(track_image_path),
         name = typhoon_name,
         intensity = typhoon_intensity,
-        url = str(advisory_link)
+        url = str(advisory_link),
+        wind_speed = wind_speed
     )
+
     info(f"Report Gathered: {adv_report.label}")
-    print("Elapsed:", time.time() - start, "seconds")
+    print("Advisory Gathering Time:", time.time() - start, "seconds")
     start = time.time()
     debug("~~~~~~~~~~~~~~~~~~")
 
@@ -244,7 +254,7 @@ else:
     info("No Bulletin Found")
     bulletin_stat = False
 
-print("Elapsed:", time.time() - start, "seconds")
+print("Bulletin Parsing Time:", time.time() - start, "seconds")
 start = time.time()
 debug("~~~~~~~~~~~~~~~~~~")
 
@@ -386,7 +396,7 @@ if bulletin_stat:
         info(f"Bulletin Wind Speed: {bul_report.wind_speed}")
         info(f"Gathered {bul_report.label}")
         debug("~~~~~~~~~~~~~~~~~~")
-    print("Elapsed:", time.time() - start, "seconds")
+    print("Bulletin Gathering Time:", time.time() - start, "seconds")
     start = time.time()
 
 
@@ -486,7 +496,7 @@ if not bulletin_stat and not advisory_stat:
             send_alert(tp_report)
         except Exception:
             error("Unable to connect to Ntfy.")
-    print("Elapsed:", time.time() - start, "seconds")
+    print("Threat Potential Gathering Time:", time.time() - start, "seconds")
     start = time.time()
     debug("~~~~~~~~~~~~~~~~~~")
 ##############################################################################################
@@ -573,8 +583,8 @@ else: ## Else if either bulletins and advisors are present, check bulletins and 
                         recorded_advisories[name] = incoming_label
                         info("New update found. Sending advisory as notification.")
                         send_stat = True
-                        pass
         else: # else if no records, add incoming advisory to the record
+            info("New record for Advisory found. Sending as notification.")
             for name in list(incoming_advisories.keys()):
                 recorded_advisories[name] = incoming_advisories[name]
             send_stat = True
@@ -591,4 +601,4 @@ with open(json_path, 'w') as f:
     json.dump(report_data, f, indent=4)
 
 debug("Entire Process Executed")
-print("Elapsed:", time.time() - process, "seconds")
+print("Notification Sending Time:", time.time() - process, "seconds")
