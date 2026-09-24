@@ -1,8 +1,6 @@
 {
     "Bulletin": {},
-    "Advisory": {
-        "": "Advisory 2"
-    },
+    "Advisory": {},
     "Threat Potential": {
         "date": "",
         "likelihood": ""
