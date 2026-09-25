@@ -1,5 +1,7 @@
 {
-    "Bulletin": {},
+    "Bulletin": {
+        "Queenie": "Bulletin 4"
+    },
     "Advisory": {},
     "Threat Potential": {
         "date": "",

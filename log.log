@@ -1,34 +1,40 @@
-2026-09-24 00:59:25,778 - DEBUG - Checking Website Response
-2026-09-24 00:59:25,780 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-09-24 00:59:27,967 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-09-24 00:59:28,671 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-09-24 00:59:29,953 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-09-24 00:59:30,410 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-09-24 00:59:31,730 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-09-24 00:59:32,197 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-09-24 00:59:32,197 - DEBUG - Checking Advisory
-2026-09-24 00:59:32,225 - INFO - Advisory found.
-2026-09-24 00:59:32,225 - INFO - Advisory Link: https://pubfiles.pagasa.dost.gov.ph/tamss/weather/tcadvisory.pdf#toolbar=0&navpanes=0&scrollbar=0
-2026-09-24 00:59:32,226 - INFO - Advisory Status: True
-2026-09-24 00:59:32,226 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-09-24 00:59:32,226 - DEBUG - Gathering Advisory Data
-2026-09-24 00:59:32,226 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
-2026-09-24 00:59:34,321 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /tamss/weather/tcadvisory.pdf HTTP/1.1" 200 403125
-2026-09-24 00:59:36,630 - INFO - Report Gathered: Advisory 4
-2026-09-24 00:59:36,630 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-09-24 00:59:36,630 - DEBUG - Checking Bulletin
-2026-09-24 00:59:36,657 - INFO - No Bulletin Found
-2026-09-24 00:59:36,657 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-09-24 00:59:36,657 - DEBUG - Checking bulletins/advisories for new updates.
-2026-09-24 00:59:36,657 - DEBUG - Checking advisories...
-2026-09-24 00:59:36,657 - INFO - Deleting key for  since it is no longer in incoming advisories
-2026-09-24 00:59:36,657 - INFO - {'Bulletin': {}, 'Advisory': {}, 'Threat Potential': {'date': '', 'likelihood': ''}}
-2026-09-24 00:59:36,657 - DEBUG - {
-    "Bulletin": {},
+2026-09-25 01:04:19,526 - DEBUG - Checking Website Response
+2026-09-25 01:04:19,528 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-09-25 01:04:22,006 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-09-25 01:04:22,381 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-09-25 01:04:23,249 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-09-25 01:04:23,790 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-09-25 01:04:24,833 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-09-25 01:04:25,194 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-09-25 01:04:25,195 - DEBUG - Checking Advisory
+2026-09-25 01:04:25,213 - INFO - No Advisory Found
+2026-09-25 01:04:25,213 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-09-25 01:04:25,213 - DEBUG - Checking Bulletin
+2026-09-25 01:04:25,233 - INFO - Bulletin found.
+2026-09-25 01:04:25,233 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-09-25 01:04:25,233 - DEBUG - Gathering Bulletin Data
+2026-09-25 01:04:25,233 - INFO - Bulletin Storm Name: Queenie
+2026-09-25 01:04:25,233 - INFO - Bulletin Storm Intensity: Tropical Storm
+2026-09-25 01:04:25,233 - INFO - Bulletin Status: True
+2026-09-25 01:04:25,241 - INFO - Bulletin Signal Number: 0
+2026-09-25 01:04:25,241 - INFO - Bulletin Report Place: Consolacion
+2026-09-25 01:04:25,241 - INFO - Bulletin Wind Speed: 75 km/hr
+2026-09-25 01:04:25,241 - INFO - Gathered Bulletin 4
+2026-09-25 01:04:25,241 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-09-25 01:04:25,241 - DEBUG - Checking bulletins/advisories for new updates.
+2026-09-25 01:04:25,241 - DEBUG - Checking bulletins...
+2026-09-25 01:04:25,241 - INFO - New update found. Sending bulletin as notification.
+2026-09-25 01:04:25,242 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-09-25 01:04:25,446 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 466
+2026-09-25 01:04:25,447 - INFO - {'Bulletin': {'Queenie': 'Bulletin 4'}, 'Advisory': {}, 'Threat Potential': {'date': '', 'likelihood': ''}}
+2026-09-25 01:04:25,448 - DEBUG - {
+    "Bulletin": {
+        "Queenie": "Bulletin 4"
+    },
     "Advisory": {},
     "Threat Potential": {
         "date": "",
         "likelihood": ""
     }
 }
-2026-09-24 00:59:36,657 - DEBUG - Entire Process Executed
+2026-09-25 01:04:25,448 - DEBUG - Entire Process Executed
