@@ -1,35 +1,36 @@
-2026-09-25 01:04:19,526 - DEBUG - Checking Website Response
-2026-09-25 01:04:19,528 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-09-25 01:04:22,006 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-09-25 01:04:22,381 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-09-25 01:04:23,249 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-09-25 01:04:23,790 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-09-25 01:04:24,833 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-09-25 01:04:25,194 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-09-25 01:04:25,195 - DEBUG - Checking Advisory
-2026-09-25 01:04:25,213 - INFO - No Advisory Found
-2026-09-25 01:04:25,213 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-09-25 01:04:25,213 - DEBUG - Checking Bulletin
-2026-09-25 01:04:25,233 - INFO - Bulletin found.
-2026-09-25 01:04:25,233 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-09-25 01:04:25,233 - DEBUG - Gathering Bulletin Data
-2026-09-25 01:04:25,233 - INFO - Bulletin Storm Name: Queenie
-2026-09-25 01:04:25,233 - INFO - Bulletin Storm Intensity: Tropical Storm
-2026-09-25 01:04:25,233 - INFO - Bulletin Status: True
-2026-09-25 01:04:25,241 - INFO - Bulletin Signal Number: 0
-2026-09-25 01:04:25,241 - INFO - Bulletin Report Place: Consolacion
-2026-09-25 01:04:25,241 - INFO - Bulletin Wind Speed: 75 km/hr
-2026-09-25 01:04:25,241 - INFO - Gathered Bulletin 4
-2026-09-25 01:04:25,241 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-09-25 01:04:25,241 - DEBUG - Checking bulletins/advisories for new updates.
-2026-09-25 01:04:25,241 - DEBUG - Checking bulletins...
-2026-09-25 01:04:25,241 - INFO - New update found. Sending bulletin as notification.
-2026-09-25 01:04:25,242 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
-2026-09-25 01:04:25,446 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 466
-2026-09-25 01:04:25,447 - INFO - {'Bulletin': {'Queenie': 'Bulletin 4'}, 'Advisory': {}, 'Threat Potential': {'date': '', 'likelihood': ''}}
-2026-09-25 01:04:25,448 - DEBUG - {
+2026-09-26 01:05:30,497 - DEBUG - Checking Website Response
+2026-09-26 01:05:30,499 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-09-26 01:05:32,831 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-09-26 01:05:33,308 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-09-26 01:05:34,574 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-09-26 01:05:35,050 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-09-26 01:05:36,177 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-09-26 01:05:36,641 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-09-26 01:05:36,641 - DEBUG - Checking Advisory
+2026-09-26 01:05:36,669 - INFO - No Advisory Found
+2026-09-26 01:05:36,669 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-09-26 01:05:36,669 - DEBUG - Checking Bulletin
+2026-09-26 01:05:36,699 - INFO - Bulletin found.
+2026-09-26 01:05:36,699 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-09-26 01:05:36,700 - DEBUG - Gathering Bulletin Data
+2026-09-26 01:05:36,700 - INFO - Bulletin Storm Name: Queenie
+2026-09-26 01:05:36,700 - INFO - Bulletin Storm Intensity: Severe Tropical Storm
+2026-09-26 01:05:36,700 - INFO - Bulletin Status: True
+2026-09-26 01:05:36,777 - INFO - Bulletin Signal Number: 0
+2026-09-26 01:05:36,777 - INFO - Bulletin Report Place: Consolacion
+2026-09-26 01:05:36,777 - INFO - Bulletin Wind Speed: 95 km/hr
+2026-09-26 01:05:36,777 - INFO - Gathered Bulletin 8
+2026-09-26 01:05:36,777 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-09-26 01:05:36,777 - DEBUG - Checking bulletins/advisories for new updates.
+2026-09-26 01:05:36,777 - DEBUG - Checking bulletins...
+2026-09-26 01:05:36,777 - INFO - Updating json.
+2026-09-26 01:05:36,777 - INFO - Sending bulletin to email.
+2026-09-26 01:05:36,778 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-09-26 01:05:36,971 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 473
+2026-09-26 01:05:36,972 - INFO - {'Bulletin': {'Queenie': 'Bulletin 8'}, 'Advisory': {}, 'Threat Potential': {'date': '', 'likelihood': ''}}
+2026-09-26 01:05:36,972 - DEBUG - {
     "Bulletin": {
-        "Queenie": "Bulletin 4"
+        "Queenie": "Bulletin 8"
     },
     "Advisory": {},
     "Threat Potential": {
@@ -37,4 +38,4 @@
         "likelihood": ""
     }
 }
-2026-09-25 01:04:25,448 - DEBUG - Entire Process Executed
+2026-09-26 01:05:36,972 - DEBUG - Entire Process Executed
