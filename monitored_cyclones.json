@@ -1,10 +1,10 @@
 {
-    "Bulletin": {},
-    "Advisory": {
-        "": "Advisory 1"
+    "Bulletin": {
+        "Queenie": "Bulletin 12"
     },
+    "Advisory": {},
     "Threat Potential": {
-        "date": "",
-        "likelihood": ""
+        "date": "2026-09-29 00:00:00",
+        "likelihood": "LESS"
     }
 }
