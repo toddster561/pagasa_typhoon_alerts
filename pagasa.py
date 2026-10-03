@@ -483,14 +483,21 @@ if not bulletin_stat and not advisory_stat:
     # Cannot save datetime obj in json, so conversion to str is necessary
     incoming_date = tp_report.date.strftime('%Y-%m-%d %H:%M:%S')
     incoming_likelihood = tp_report.likelihood
-    # If either is missing OR both are different, update both, then send email
-    if not (recorded_date and recorded_likelihood and
-            recorded_date == incoming_date and
-            recorded_likelihood == incoming_likelihood):
+
+    # If either date or likelihood is missing, update both in json
+    if not (recorded_date and recorded_likelihood):
         report_data['Threat Potential']['date'] = incoming_date
         report_data['Threat Potential']['likelihood'] = incoming_likelihood
-        info("Sending Threat Potential Report to email")
-        send_stat = True
+        # If both are different, send notif
+        if (recorded_date == incoming_date and
+            recorded_likelihood == incoming_likelihood):
+            info("Sending Threat Potential Report to ntfy.")
+            send_stat = True
+        # If typhoon potential is likely, send notif
+        elif incoming_likelihood.upper() == "LIKELY":
+            info("Threat Potential Likely. Sending report to ntfy.")
+            send_stat = True
+
     if send_stat:
         try:
             send_alert(tp_report)
