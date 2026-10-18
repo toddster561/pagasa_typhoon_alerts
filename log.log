@@ -1,31 +1,40 @@
-2026-10-17 00:56:23,994 - DEBUG - Checking Website Response
-2026-10-17 00:56:23,995 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-10-17 00:56:26,940 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-10-17 00:56:27,326 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-10-17 00:56:28,318 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-10-17 00:56:28,713 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-10-17 00:56:29,704 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-10-17 00:56:30,097 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-10-17 00:56:30,097 - DEBUG - Checking Advisory
-2026-10-17 00:56:30,121 - INFO - No Advisory Found
-2026-10-17 00:56:30,121 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-10-17 00:56:30,121 - DEBUG - Checking Bulletin
-2026-10-17 00:56:30,143 - INFO - No Bulletin Found
-2026-10-17 00:56:30,143 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-10-17 00:56:30,143 - DEBUG - Checking Threat Potential
-2026-10-17 00:56:30,167 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
-2026-10-17 00:56:33,438 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 941664
-2026-10-17 00:56:36,621 - INFO - Forecast Date: From October 15, 2026 to October 28, 2026
-2026-10-17 00:56:36,621 - INFO - Likelihood: ACTIVE over the next two weeks
-2026-10-17 00:56:36,621 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-10-17 00:56:36,621 - DEBUG - {
+2026-10-18 00:31:47,420 - DEBUG - Checking Website Response
+2026-10-18 00:31:47,421 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-10-18 00:31:48,729 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-10-18 00:31:49,171 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-10-18 00:31:50,433 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-10-18 00:31:50,882 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-10-18 00:31:51,988 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-10-18 00:31:52,429 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-10-18 00:31:52,430 - DEBUG - Checking Advisory
+2026-10-18 00:31:52,460 - INFO - Advisory found.
+2026-10-18 00:31:52,460 - INFO - Advisory Link: https://pubfiles.pagasa.dost.gov.ph/tamss/weather/tcadvisory.pdf#toolbar=0&navpanes=0&scrollbar=0
+2026-10-18 00:31:52,460 - INFO - Advisory Status: True
+2026-10-18 00:31:52,460 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-10-18 00:31:52,460 - DEBUG - Gathering Advisory Data
+2026-10-18 00:31:52,461 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-10-18 00:31:56,624 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /tamss/weather/tcadvisory.pdf HTTP/1.1" 200 583069
+2026-10-18 00:31:59,167 - INFO - Report Gathered: Advisory 1
+2026-10-18 00:31:59,167 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-10-18 00:31:59,167 - DEBUG - Checking Bulletin
+2026-10-18 00:31:59,197 - INFO - No Bulletin Found
+2026-10-18 00:31:59,197 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-10-18 00:31:59,197 - DEBUG - Checking bulletins/advisories for new updates.
+2026-10-18 00:31:59,197 - DEBUG - Checking advisories...
+2026-10-18 00:31:59,197 - INFO - New record for Advisory found. Sending as notification.
+2026-10-18 00:31:59,197 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-10-18 00:31:59,433 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 467
+2026-10-18 00:31:59,434 - INFO - {'Bulletin': {'Queenie': 'Bulletin 12'}, 'Advisory': {'Champi': 'Advisory 1'}, 'Threat Potential': {'date': '2026-09-29 00:00:00', 'likelihood': 'LESS'}}
+2026-10-18 00:31:59,434 - DEBUG - {
     "Bulletin": {
         "Queenie": "Bulletin 12"
     },
-    "Advisory": {},
+    "Advisory": {
+        "Champi": "Advisory 1"
+    },
     "Threat Potential": {
         "date": "2026-09-29 00:00:00",
         "likelihood": "LESS"
     }
 }
-2026-10-17 00:56:36,622 - DEBUG - Entire Process Executed
+2026-10-18 00:31:59,435 - DEBUG - Entire Process Executed
