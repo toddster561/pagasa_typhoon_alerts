@@ -1,38 +1,38 @@
-2026-10-23 01:07:16,660 - DEBUG - Checking Website Response
-2026-10-23 01:07:16,662 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-10-23 01:07:18,945 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-10-23 01:07:19,360 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-10-23 01:07:20,394 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-10-23 01:07:20,808 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-10-23 01:07:21,955 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-10-23 01:07:22,373 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-10-23 01:07:22,373 - DEBUG - Checking Advisory
-2026-10-23 01:07:22,396 - INFO - No Advisory Found
-2026-10-23 01:07:22,396 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-10-23 01:07:22,396 - DEBUG - Checking Bulletin
-2026-10-23 01:07:22,426 - INFO - Bulletin found.
-2026-10-23 01:07:22,426 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-10-23 01:07:22,426 - DEBUG - Gathering Bulletin Data
-2026-10-23 01:07:22,427 - INFO - Bulletin Storm Name: Rosal
-2026-10-23 01:07:22,427 - INFO - Bulletin Storm Intensity: Typhoon
-2026-10-23 01:07:22,427 - INFO - Bulletin Status: True
-2026-10-23 01:07:22,482 - INFO - Consolacion does not have a signal number.
-2026-10-23 01:07:22,482 - INFO - Cebu has signal number 0
-2026-10-23 01:07:22,482 - INFO - Bulletin Signal Number: 0
-2026-10-23 01:07:22,482 - INFO - Bulletin Report Place: Cebu
-2026-10-23 01:07:22,482 - INFO - Bulletin Wind Speed: 155 km/hr
-2026-10-23 01:07:22,482 - INFO - Gathered Bulletin 12
-2026-10-23 01:07:22,482 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-10-23 01:07:22,482 - DEBUG - Checking bulletins/advisories for new updates.
-2026-10-23 01:07:22,482 - DEBUG - Checking bulletins...
-2026-10-23 01:07:22,482 - INFO - Updating json.
-2026-10-23 01:07:22,482 - INFO - Sending bulletin to email.
-2026-10-23 01:07:22,483 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
-2026-10-23 01:07:22,639 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 451
-2026-10-23 01:07:22,640 - INFO - {'Bulletin': {'Rosal': 'Bulletin 12'}, 'Advisory': {'Champi': 'Advisory 6'}, 'Threat Potential': {'date': '2026-09-29 00:00:00', 'likelihood': 'LESS'}}
-2026-10-23 01:07:22,641 - DEBUG - {
+2026-10-24 01:17:38,815 - DEBUG - Checking Website Response
+2026-10-24 01:17:38,816 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-10-24 01:17:41,469 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-10-24 01:17:41,926 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-10-24 01:17:43,166 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-10-24 01:17:43,615 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-10-24 01:17:44,797 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-10-24 01:17:45,244 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-10-24 01:17:45,244 - DEBUG - Checking Advisory
+2026-10-24 01:17:45,272 - INFO - No Advisory Found
+2026-10-24 01:17:45,272 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-10-24 01:17:45,272 - DEBUG - Checking Bulletin
+2026-10-24 01:17:45,305 - INFO - Bulletin found.
+2026-10-24 01:17:45,305 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-10-24 01:17:45,305 - DEBUG - Gathering Bulletin Data
+2026-10-24 01:17:45,306 - INFO - Bulletin Storm Name: Rosal
+2026-10-24 01:17:45,306 - INFO - Bulletin Storm Intensity: Typhoon
+2026-10-24 01:17:45,306 - INFO - Bulletin Status: True
+2026-10-24 01:17:45,324 - INFO - Consolacion does not have a signal number.
+2026-10-24 01:17:45,324 - INFO - Cebu has signal number 0
+2026-10-24 01:17:45,324 - INFO - Bulletin Signal Number: 0
+2026-10-24 01:17:45,324 - INFO - Bulletin Report Place: Cebu
+2026-10-24 01:17:45,324 - INFO - Bulletin Wind Speed: 150 km/hr
+2026-10-24 01:17:45,324 - INFO - Gathered Bulletin 16
+2026-10-24 01:17:45,324 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-10-24 01:17:45,324 - DEBUG - Checking bulletins/advisories for new updates.
+2026-10-24 01:17:45,324 - DEBUG - Checking bulletins...
+2026-10-24 01:17:45,324 - INFO - Updating json.
+2026-10-24 01:17:45,324 - INFO - Sending bulletin to email.
+2026-10-24 01:17:45,325 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-10-24 01:17:45,379 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 451
+2026-10-24 01:17:45,381 - INFO - {'Bulletin': {'Rosal': 'Bulletin 16'}, 'Advisory': {'Champi': 'Advisory 6'}, 'Threat Potential': {'date': '2026-09-29 00:00:00', 'likelihood': 'LESS'}}
+2026-10-24 01:17:45,381 - DEBUG - {
     "Bulletin": {
-        "Rosal": "Bulletin 12"
+        "Rosal": "Bulletin 16"
     },
     "Advisory": {
         "Champi": "Advisory 6"
@@ -42,4 +42,4 @@
         "likelihood": "LESS"
     }
 }
-2026-10-23 01:07:22,641 - DEBUG - Entire Process Executed
+2026-10-24 01:17:45,381 - DEBUG - Entire Process Executed
