@@ -2,7 +2,9 @@
     "Bulletin": {
         "Rosal": "Bulletin 16"
     },
-    "Advisory": {},
+    "Advisory": {
+        "Cempaka": "Advisory 4"
+    },
     "Threat Potential": {
         "date": "2026-09-29 00:00:00",
         "likelihood": "LESS"

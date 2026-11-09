@@ -1,36 +1,40 @@
-2026-11-08 01:58:20,314 - DEBUG - Checking Website Response
-2026-11-08 01:58:20,315 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-11-08 01:58:21,936 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-11-08 01:58:22,261 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-11-08 01:58:23,160 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-11-08 01:58:23,486 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-11-08 01:58:24,460 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-11-08 01:58:24,786 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-11-08 01:58:24,786 - DEBUG - Checking Advisory
-2026-11-08 01:58:24,808 - INFO - Advisory found.
-2026-11-08 01:58:24,808 - INFO - Advisory Link: https://pubfiles.pagasa.dost.gov.ph/tamss/weather/tcadvisory.pdf#toolbar=0&navpanes=0&scrollbar=0
-2026-11-08 01:58:24,808 - INFO - Advisory Status: True
-2026-11-08 01:58:24,808 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-11-08 01:58:24,808 - DEBUG - Gathering Advisory Data
-2026-11-08 01:58:24,809 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
-2026-11-08 01:58:26,275 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /tamss/weather/tcadvisory.pdf HTTP/1.1" 200 571537
-2026-11-08 01:58:28,298 - INFO - Report Gathered: Advisory 1
-2026-11-08 01:58:28,298 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-11-08 01:58:28,299 - DEBUG - Checking Bulletin
-2026-11-08 01:58:28,319 - INFO - No Bulletin Found
-2026-11-08 01:58:28,319 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-11-08 01:58:28,319 - DEBUG - Checking bulletins/advisories for new updates.
-2026-11-08 01:58:28,320 - DEBUG - Checking advisories...
-2026-11-08 01:58:28,320 - INFO - Deleting key for Champi since it is no longer in incoming advisories
-2026-11-08 01:58:28,320 - INFO - {'Bulletin': {'Rosal': 'Bulletin 16'}, 'Advisory': {}, 'Threat Potential': {'date': '2026-09-29 00:00:00', 'likelihood': 'LESS'}}
-2026-11-08 01:58:28,320 - DEBUG - {
+2026-11-09 02:16:14,450 - DEBUG - Checking Website Response
+2026-11-09 02:16:14,451 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-11-09 02:16:15,488 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-11-09 02:16:15,837 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-11-09 02:16:16,834 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-11-09 02:16:17,184 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-11-09 02:16:18,081 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-11-09 02:16:18,430 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-11-09 02:16:18,430 - DEBUG - Checking Advisory
+2026-11-09 02:16:18,456 - INFO - Advisory found.
+2026-11-09 02:16:18,456 - INFO - Advisory Link: https://pubfiles.pagasa.dost.gov.ph/tamss/weather/tcadvisory.pdf#toolbar=0&navpanes=0&scrollbar=0
+2026-11-09 02:16:18,456 - INFO - Advisory Status: True
+2026-11-09 02:16:18,456 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-11-09 02:16:18,456 - DEBUG - Gathering Advisory Data
+2026-11-09 02:16:18,456 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-11-09 02:16:19,624 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /tamss/weather/tcadvisory.pdf HTTP/1.1" 200 402034
+2026-11-09 02:16:22,018 - INFO - Report Gathered: Advisory 4
+2026-11-09 02:16:22,018 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-11-09 02:16:22,018 - DEBUG - Checking Bulletin
+2026-11-09 02:16:22,043 - INFO - No Bulletin Found
+2026-11-09 02:16:22,043 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-11-09 02:16:22,043 - DEBUG - Checking bulletins/advisories for new updates.
+2026-11-09 02:16:22,043 - DEBUG - Checking advisories...
+2026-11-09 02:16:22,043 - INFO - New record for Advisory found. Sending as notification.
+2026-11-09 02:16:22,044 - DEBUG - Starting new HTTPS connection (1): ntfy.sh:443
+2026-11-09 02:16:22,433 - DEBUG - https://ntfy.sh:443 "POST /pagasa-cyclone-alerts-561 HTTP/1.1" 200 462
+2026-11-09 02:16:22,434 - INFO - {'Bulletin': {'Rosal': 'Bulletin 16'}, 'Advisory': {'Cempaka': 'Advisory 4'}, 'Threat Potential': {'date': '2026-09-29 00:00:00', 'likelihood': 'LESS'}}
+2026-11-09 02:16:22,434 - DEBUG - {
     "Bulletin": {
         "Rosal": "Bulletin 16"
     },
-    "Advisory": {},
+    "Advisory": {
+        "Cempaka": "Advisory 4"
+    },
     "Threat Potential": {
         "date": "2026-09-29 00:00:00",
         "likelihood": "LESS"
     }
 }
-2026-11-08 01:58:28,320 - DEBUG - Entire Process Executed
+2026-11-09 02:16:22,434 - DEBUG - Entire Process Executed
