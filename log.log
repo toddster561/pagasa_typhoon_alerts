@@ -1,24 +1,24 @@
-2026-11-12 03:31:14,973 - DEBUG - Checking Website Response
-2026-11-12 03:31:14,974 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-11-12 03:31:16,192 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
-2026-11-12 03:31:16,532 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-11-12 03:31:17,258 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
-2026-11-12 03:31:17,771 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-11-12 03:31:18,652 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
-2026-11-12 03:31:18,990 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-11-12 03:31:18,990 - DEBUG - Checking Advisory
-2026-11-12 03:31:19,017 - INFO - No Advisory Found
-2026-11-12 03:31:19,018 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-11-12 03:31:19,018 - DEBUG - Checking Bulletin
-2026-11-12 03:31:19,045 - INFO - No Bulletin Found
-2026-11-12 03:31:19,045 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-11-12 03:31:19,045 - DEBUG - Checking Threat Potential
-2026-11-12 03:31:19,072 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
-2026-11-12 03:31:20,718 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 1806972
-2026-11-12 03:31:25,324 - INFO - Forecast Date: From November 09, 2026 to November 22, 2026
-2026-11-12 03:31:25,324 - INFO - Likelihood: UNLIKELY over the next two weeks
-2026-11-12 03:31:25,324 - DEBUG - ~~~~~~~~~~~~~~~~~~
-2026-11-12 03:31:25,324 - DEBUG - {
+2026-11-13 03:04:02,258 - DEBUG - Checking Website Response
+2026-11-13 03:04:02,260 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-11-13 03:04:03,953 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-11-13 03:04:04,292 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-11-13 03:04:05,293 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-11-13 03:04:05,648 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-11-13 03:04:06,516 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-11-13 03:04:06,854 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-11-13 03:04:06,854 - DEBUG - Checking Advisory
+2026-11-13 03:04:06,884 - INFO - No Advisory Found
+2026-11-13 03:04:06,884 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-11-13 03:04:06,884 - DEBUG - Checking Bulletin
+2026-11-13 03:04:06,908 - INFO - No Bulletin Found
+2026-11-13 03:04:06,909 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-11-13 03:04:06,909 - DEBUG - Checking Threat Potential
+2026-11-13 03:04:06,934 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-11-13 03:04:07,953 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 1788666
+2026-11-13 03:04:14,763 - INFO - Forecast Date: From November 12, 2026 to November 25, 2026
+2026-11-13 03:04:14,763 - INFO - Likelihood: LESS over the next two weeks
+2026-11-13 03:04:14,763 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-11-13 03:04:14,763 - DEBUG - {
     "Bulletin": {
         "Rosal": "Bulletin 16"
     },
@@ -30,4 +30,4 @@
         "likelihood": "LESS"
     }
 }
-2026-11-12 03:31:25,325 - DEBUG - Entire Process Executed
+2026-11-13 03:04:14,763 - DEBUG - Entire Process Executed
