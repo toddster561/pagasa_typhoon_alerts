@@ -1,3 +1,33 @@
-2026-11-21 03:40:57,801 - DEBUG - Checking Website Response
-2026-11-21 03:40:57,802 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
-2026-11-21 03:41:14,946 - ERROR - Error: Site Unresponsive
+2026-11-22 02:46:03,203 - DEBUG - Checking Website Response
+2026-11-22 02:46:03,204 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-11-22 02:46:05,602 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone-advisory-iframe HTTP/1.1" 200 None
+2026-11-22 02:46:06,045 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-11-22 02:46:07,260 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/severe-weather-bulletin HTTP/1.1" 200 None
+2026-11-22 02:46:07,703 - DEBUG - Starting new HTTPS connection (1): www.pagasa.dost.gov.ph:443
+2026-11-22 02:46:08,826 - DEBUG - https://www.pagasa.dost.gov.ph:443 "GET /tropical-cyclone/tc-threat-potential-forecast HTTP/1.1" 200 None
+2026-11-22 02:46:09,269 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-11-22 02:46:09,269 - DEBUG - Checking Advisory
+2026-11-22 02:46:09,287 - INFO - No Advisory Found
+2026-11-22 02:46:09,288 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-11-22 02:46:09,288 - DEBUG - Checking Bulletin
+2026-11-22 02:46:09,305 - INFO - No Bulletin Found
+2026-11-22 02:46:09,305 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-11-22 02:46:09,306 - DEBUG - Checking Threat Potential
+2026-11-22 02:46:09,324 - DEBUG - Starting new HTTPS connection (1): pubfiles.pagasa.dost.gov.ph:443
+2026-11-22 02:46:11,313 - DEBUG - https://pubfiles.pagasa.dost.gov.ph:443 "GET /pagasaweb/files/climate/tcthreat/TC_Threat_and_S2S_Forecast.pdf HTTP/1.1" 200 2637522
+2026-11-22 02:46:15,873 - INFO - Forecast Date: From November 19, 2026 to December 02, 2026
+2026-11-22 02:46:15,873 - INFO - Likelihood: LESS over the next two weeks
+2026-11-22 02:46:15,873 - DEBUG - ~~~~~~~~~~~~~~~~~~
+2026-11-22 02:46:15,873 - DEBUG - {
+    "Bulletin": {
+        "Rosal": "Bulletin 16"
+    },
+    "Advisory": {
+        "Cempaka": "Advisory 4"
+    },
+    "Threat Potential": {
+        "date": "2026-09-29 00:00:00",
+        "likelihood": "LESS"
+    }
+}
+2026-11-22 02:46:15,873 - DEBUG - Entire Process Executed
